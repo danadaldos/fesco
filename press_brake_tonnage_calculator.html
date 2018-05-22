@@ -1,0 +1,1214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fabricating Equipment Sales Co. | Press Brake Tonnage Calculator</title>
+<meta name="keywords" content="fabricating equipment sales, press brake tonnage calculator, tonnage calculator, structural steel equipment, sheet metal fabricating, steel machines, fabricating equipment, Colorado, Wyoming" />
+
+<meta name="description" content="Fabricating Equipment Sales Co.'s Press Brake Tonnage calculator determines your material and punch &amp; die configuration. This estimates the tonnage required to complete a 90° bend." />
+
+<link href="main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<style>
+.calculatorPage table.chart,
+.calculatorPage table.calcTable
+{
+margin: 0 auto !important;
+}
+
+.calculatorPage table.chart,
+.calculatorPage table.chart tr td {
+	text-align:center;
+	margin-top: 20px !important;
+	font-size: 10pt !important;
+	border-collapse: collapse;
+	vertical-align: bottom;
+	border: 1px solid #808080;
+	padding: 0 3px;
+}
+
+.calculatorPage table.chart .heading {
+	background-color: #FFFFFF !important;
+	text-align:center !important;
+}
+.style17 {
+	font-size: 24px;
+	color: #003366;
+}
+</style>
+
+<script language=javascript>
+function IsNumeric(sText)
+{
+   var ValidChars = "0123456789.";
+   var IsNumber=true;
+   var Char;
+
+   for (i = 0; i < sText.length && IsNumber == true; i++) 
+      { 
+      Char = sText.charAt(i); 
+      if (ValidChars.indexOf(Char) == -1) 
+         {
+         IsNumber = false;
+         }
+      }
+   return IsNumber;
+   
+   }
+
+function ReCalc(form)
+{ 
+  if (IsNumeric(form.D5.value) && IsNumeric(form.D7.value) && IsNumeric(form.D9.value) && IsNumeric(form.D11.value))
+  {
+   with (Math) {
+	  form.D13.value = eval("-0.01625*(" + form.D9.value + "/" + form.D7.value + ")+1.46").toFixed(4);
+	  form.D14.value = eval(form.D9.value + "/" + form.D7.value).toFixed(1);
+	  form.D15.value = eval("0.15625*" + form.D9.value).toFixed(3);
+	  form.D16.value = eval("(0.15625*" + form.D9.value + ")+" + form.D7.value).toFixed(3);  
+	  form.D17.value = eval("(" + form.D9.value + "/2)+" + form.D7.value).toFixed(3);
+	  form.D28.value = eval("((" + form.D5.value + "*" + form.D25.value + "*(pow(" + form.D7.value + ",2))*cos(" + form.D30.value + "*(PI/180)/2))*(cos((" + form.D30.value + "*(PI/180)/2))+" + form.D26.value + "*sin(" + form.D30.value + "*(PI/180)/2)))/(" + form.D9.value + "-(2*(" + form.D11.value + "+" + form.D7.value + ")*sin(" + form.D30.value + "*(PI/180)/2)))+(" + form.D26.value + "*" + form.D7.value + "*cos(" + form.D30.value + "*(PI/180)/2))").toFixed(2);
+	  form.D18.value = eval("(" + form.D28.value + "*" + form.D13.value + ")/2000").toFixed(1);
+ 	  form.G20.value = eval(form.D18.value + "*" + form.F20.value).toFixed(0);
+			   }
+  }
+  else
+  { alert("Use numbers only!")}
+}
+
+function Clear(form)
+
+{ 
+  
+  form.D13.value = ""
+  form.D14.value = ""
+  form.D15.value = ""
+  form.D16.value = ""
+  form.D17.value = ""
+  form.D28.value = ""
+  form.D18.value = ""
+  form.G20.value = ""
+}
+</script>
+
+</head>
+
+<body onload="MM_preloadImages('images/home_button_active.jpg','images/used_button_active.jpg','images/contact_button_active3.jpg','images/company_button_active2.jpg','images/type2_button_active.jpg','images/application_button_active.jpg','images/products_button_active.jpg','images/applications_nav_button_active2.jpg')">
+<div id="shadow_left"><div id="shadow_right"><div id="header" alt="Fabricating Equipment Sales - Structural Steel and Sheet Metal Fabricating Equipment"></div>
+<div class="style1" id="navigation">
+<a href="index2.html"><img src="images/home_button.jpg" alt="HOME" border="0" id="Image1" onmouseover="MM_swapImage('Image1','','images/home_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="company.html"><img src="images/company_button.jpg" alt="COMPANY" width="158" height="27" border="0" id="Image2" onmouseover="MM_swapImage('Image2','','images/company_button_active2.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="products.html"><img src="images/products_button.jpg" alt="PRODUCTS" width="158" height="27" border="0" id="Image3" onmouseover="MM_swapImage('Image3','','images/products_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="applications.html"><img src="images/applications_nav_button.jpg" alt="APPLICATIONS" width="158" height="27" border="0" id="Image4" onmouseover="MM_swapImage('Image4','','images/applications_nav_button_active2.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="used_equipment.html"><img src="images/used_button.jpg" alt="USED EQUIPMENT" width="158" height="27" border="0" id="Image5" onmouseover="MM_swapImage('Image5','','images/used_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="contact_us.html"><img src="images/contact_button.jpg" alt="CONTACT US" width="160" height="27" border="0" id="Image6" onmouseover="MM_swapImage('Image6','','images/contact_button_active3.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><img src="images/divider.jpg" width="950" height="8" /></div>
+  <div id="content2">
+    <h1 align="left" class="style17">Press Brake Tonnage Calculator</h1>
+			
+	  <form name=Calc>
+      <table width="600px" class="calcTable" border=0 align="center" cellpadding=5 cellspacing=0 borderColor=#c0c0c0 id=table1>
+
+        <tbody>
+        <tr>
+          <td colspan="2" valign="top"><p><b>Instructions: </b><em><b><font color="#CC0000">Input data into the required fields </font></b></em>for your material and punch &amp; die configuration. This estimates the tonnage required to complete a 90&deg; bend. <i>(Yield and Tensile Material chart below)</i>
+
+            </p></td>
+          </tr>
+
+        <tr bgcolor="#DDDDDD">
+          <td width="57%" ><div align="right">Tensile Strength (PSI)</div></td>
+          <td width="43%" align="left">
+            <input 
+            onkeydown=Clear(this.form) onchange=ReCalc(this.form) size=7 
+            value=95000 name=D5> (required)
+          </td>
+        </tr>
+
+        <tr>
+          <td width="57%"><div align="right">Material Thickness (inches) - T </div></td>
+
+          <td width="43%" align="left">
+            <input 
+            onkeydown=Clear(this.form) onchange=ReCalc(this.form) size=7 
+            value=0.375 name=D7> (required)
+          </td></tr>
+        <tr bgcolor="#DDDDDD">
+          <td width="57%"><div align="right">Die Width (inches) - W</div></td>
+
+          <td width="43%" align="left">
+            <input 
+            onkeydown=Clear(this.form) onchange=ReCalc(this.form) size=7 
+            value=3.5 name=D9> (required)
+          </td></tr>
+
+        <tr>
+          <td width="57%"><div align="right">Punch Radius (inches)</div></td>
+          <td width="43%" align="left">
+            <input 
+            onkeydown=Clear(this.form) onchange=ReCalc(this.form) size=7 
+            value=0.25 name=D11> (required)
+          </td>
+
+        </tr>
+        <tr bgcolor="#990000">
+          <td colspan="2"><div align="center">
+
+            <input onClick=ReCalc(this.form) type=button value=Calculate/Recalculate name=B3>
+          </div></td>
+        </tr>
+        
+        <tr>
+          <td width="57%"><div align="right">K Factor </div></td>
+
+          <td align="left" width="43%">
+            <input class=ro_input readOnly size=10 name=D13>
+          </td>
+
+        </tr>
+        <tr  bgcolor="#DDDDDD">
+          <td width="57%"><div align="right">Die Ratio (W/T)</div></td>
+          <td width="43%" align="left">
+            <input class=ro_input readOnly size=10 name=D14>
+		  </td>
+        </tr>
+        
+        <tr>
+
+          <td width="57%"><div align="right">Bend Radius - Inside<br>
+          Estimated Air Bend Radius</div></td>
+          <td align="left" width="43%">
+            <input 
+            class=ro_input readOnly size=10 name=D15>
+		  </td>
+        </tr>
+        <tr bgcolor="#DDDDDD">
+          <td width="57%" ><p align="right">Bend Radius - Outside<br>
+            Estimated Air Bend Radius</p>
+          </td>
+          <td width="43%" align="left">
+            <input class=ro_input readOnly size=10 name=D16>
+          </td>
+        </tr>
+        
+        <tr>
+          <td width="57%"><p align="right">Minimum Between Bends<br>
+            Minimum Leg Length for Die Width</p>
+          </td>
+          <td align="left">
+            <input class=ro_input readOnly size=10 name=D17>
+          </td>
+        </tr>
+        <tr bgcolor="#DDDDDD">
+          <td width="57%"><div align="right"><B>Tonnage Required 
+            </B>(per foot of Bend)</div></td>
+          <td width="43%" align="left">
+            <input class=robig_input size=7 name=D18>
+          </td>
+        </tr>
+        <tr bgcolor="#990000">
+          <td colspan="2"><div align="center" style="color:#ffffff"><b>Total Tonnage for Bend  
+          </b></div></td>
+        </tr>
+        
+        <tr>
+
+          <td><div align="right">Overall Length </div></td>
+
+          <td><input onKeyDown=Clear(this.form) onChange=ReCalc(this.form) size=5 value=20 name=F20>
+FT<font size=3>&nbsp;(required)</font></td>
+        </tr>
+        <tr bgcolor="#DDDDDD">
+          <td colspan="2">
+            <div align="center">
+              TONS<input readonly class=robig_input size=7 name=G20>
+
+            </div></td>
+
+        </tr>
+        <tr bgcolor="#990000">
+          <td colspan="2"><div align="center" style="color:#ffffff"><b>Constants (Press Brake Tonnage):</b></div></td>
+        </tr>
+        
+        <tr>
+          <td width="57%"><div align="right">Bend Length (inches)</div></td>
+
+          <td width="43%">
+             <input class=ro_input readOnly size=10 value=12 name=D25>
+          </td>
+
+        </tr>
+        <tr bgcolor="#DDDDDD">
+          <td width="57%" ><div align="right">Friction Coefficient</div></td>
+          <td width="43%">
+            <input class=ro_input readonly size=10 value=0.1 name=D26>
+          </td>
+        </tr>
+        
+        <tr>
+
+          <td width="57%"><div align="right">Calculated Value of Force</div></td>
+
+          <td width="43%"><input class=ro_input readOnly size=10 name=D28></td>
+        </tr>
+        <tr bgcolor="#DDDDDD">
+          <td width="57%"><div align="right">Bend Angle (degrees)</div></td>
+          <td width="43%">            
+          	<input class=ro_input readOnly size=10 value=37 name=D30>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td colspan="2"><p><b>DISCLAIMER:</b> 
+                Actual bending force is affected by many factors such as friction between the material and the die, material thickness, material strength variations, rolling direction of the steel, work hardening and other parameters. This estimator calculates a force representative of the pressbrake requirement for air bending. Sizing of a machine or available die width should allow for up to 20% additional capacity. We make no guarantee of actual force required to make a bend in a specific part.</p></td>
+        </tr>
+  </tbody></table>
+</form>
+
+<br />
+<table width="600px" class="chart" border="1" align="center" cellpadding="1" cellspacing="1" id="charttable" style="" x:str="x:str">
+      <tbody>
+        <tr bgcolor="#990000" height="34">
+          <td colspan="8" style="vertical-align: bottom; text-decoration: none; font-size: 10pt;"><p align="center"><font size="4" color="#FFFFFF"><b>MATERIAL STRENGTH</b></font></p></td>
+        </tr>
+        
+        <tr bgcolor="#CCCCCC">
+          <td><strong> ASTM <br />
+            Number</strong></td>
+          <td><strong>Other Number</strong></td>
+          <td><strong>Grade</strong></td>
+          <td><strong>Yield Str. </strong></td>
+          <td><strong>Min. Tensile </strong></td>
+          <td><strong>Max. Tensile </strong></td>
+          <td><strong>Min. Rad. </strong></td>
+          <td width="65"><strong>Recom.<br />
+            Vee Die </strong></td>
+        </tr>
+        
+        <tr class="heading">
+          <td colspan="8"><div align="center" class="style3">CARBON STEEL</div></td>
+        </tr>
+        
+        <tr height="17" style="vertical-align: bottom; text-decoration: none; font-size: 10pt; padding-left: 3; padding-right: 3">
+          <td>&nbsp;</td>
+          <td align="center" x:num="x:num">1015</td>
+          <td align="center">&nbsp;</td>
+          <td align="center" x:num="x:num">29000</td>
+          <td align="center" x:num="x:num">50000</td>
+          <td align="center" x:num="x:num" x:fmla="=E4+15000">65000</td>
+          <td align="center">&nbsp;</td>
+          <td align="center">&nbsp;</td>
+        </tr>
+        
+        <tr height="17">
+          <td><b>&nbsp;</b></td>
+          <td align="center" x:num="x:num">1020</td>
+          <td align="center">&nbsp;</td>
+          <td align="center" x:num="x:num">32000</td>
+          <td align="center" x:num="x:num">58000</td>
+          <td align="center" x:num="x:num" x:fmla="=E5+15000">73000</td>
+          <td align="center">&nbsp;</td>
+          <td align="center">&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td x:num="x:num">1025</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">34000</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num" x:fmla="=E6+15000">85000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>A36</b></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">36000</td>
+          <td x:num="x:num">58000</td>
+          <td x:num="x:num">80000</td>
+          <td>1.5T</td>
+          <td>8T - 12T</td>
+        </tr>
+        
+        <tr>
+          <td><b>A242</b></td>
+          <td>CORTEN</td>
+          <td>A</td>
+          <td x:num="x:num">50000</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num" x:fmla="=E8+15000">85000</td>
+          <td>3T</td>
+          <td>12T</td>
+        </tr>
+        
+        <tr>
+          <td><b>A283</b></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">30000</td>
+          <td x:num="x:num">55000</td>
+          <td x:num="x:num">60000</td>
+          <td>1.5T</td>
+          <td>8T - 10T</td>
+        </tr>
+        
+        <tr>
+          <td><b>A514</b></td>
+          <td>T-1</td>
+          <td>B,F,H,Q</td>
+          <td x:num="x:num">100000</td>
+          <td x:num="x:num">110000</td>
+          <td x:num="x:num">130000</td>
+          <td>3T</td>
+          <td>16T</td>
+        </tr>
+        
+        <tr>
+          <td><b>A570</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">30</td>
+          <td x:num="x:num">30000</td>
+          <td x:num="x:num">49000</td>
+          <td x:num="x:num" x:fmla="=E12+15000">64000</td>
+          <td>1T</td>
+          <td 
+          x:str="8T  ">8T&nbsp;&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">33</td>
+          <td x:num="x:num">33000</td>
+          <td x:num="x:num">52000</td>
+          <td x:num="x:num" x:fmla="=E13+15000">67000</td>
+          <td>1T</td>
+          <td x:str="10T  ">10T&nbsp;&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">36</td>
+          <td x:num="x:num">36000</td>
+          <td x:num="x:num">53000</td>
+          <td x:num="x:num" x:fmla="=E14+15000">68000</td>
+          <td>1.5T</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">40</td>
+          <td x:num="x:num">40000</td>
+          <td x:num="x:num">55000</td>
+          <td x:num="x:num" x:fmla="=E15+15000">70000</td>
+          <td>2T</td>
+          <td>12T</td>
+        </tr>
+
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">45</td>
+          <td x:num="x:num">45000</td>
+          <td x:num="x:num">60000</td>
+          <td x:num="x:num" x:fmla="=E16+15000">75000</td>
+          <td>2T</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">50</td>
+          <td x:num="x:num">50000</td>
+          <td x:num="x:num">65000</td>
+          <td x:num="x:num" x:fmla="=E17+15000">80000</td>
+          <td>2.5T</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">55</td>
+          <td x:num="x:num">55000</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num" x:fmla="=E18+15000">85000</td>
+          <td>3T</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>A572</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">42</td>
+          <td x:num="x:num">42000</td>
+          <td x:num="x:num">60000</td>
+          <td x:num="x:num" x:fmla="=E19+15000">75000</td>
+          <td>2T</td>
+          <td>10T - 12T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">50</td>
+          <td x:num="x:num">50000</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num" x:fmla="=E20+15000">85000</td>
+          <td>2.5T</td>
+          <td>12T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">60</td>
+          <td x:num="x:num">60000</td>
+          <td x:num="x:num">75000</td>
+          <td x:num="x:num" x:fmla="=E21+15000">90000</td>
+          <td>3.5T</td>
+          <td>14T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">65</td>
+          <td x:num="x:num">65000</td>
+          <td x:num="x:num">80000</td>
+          <td x:num="x:num" x:fmla="=E22+15000">95000</td>
+          <td>4T</td>
+          <td>14T - 16T</td>
+        </tr>
+        
+        <tr>
+          <td><b>A588</b></td>
+          <td>CORTEN</td>
+          <td>B</td>
+          <td x:num="x:num">50000</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num" x:fmla="=E23+15000">85000</td>
+          <td>3T</td>
+          <td>10T - 12T</td>
+        </tr>
+        
+        <tr>
+          <td><b>A606</b></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">50000</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num" x:fmla="=E24+15000">85000</td>
+          <td>2.5T</td>
+          <td>8T - 12T</td>
+        </tr>
+        
+        <tr>
+          <td><b>A607</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">45</td>
+          <td x:num="x:num">45000</td>
+          <td x:num="x:num">60000</td>
+          <td x:num="x:num" x:fmla="=E25+15000">75000</td>
+          <td>1.5T</td>
+          <td>8T - 10T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">50</td>
+          <td x:num="x:num">50000</td>
+          <td x:num="x:num">65000</td>
+          <td x:num="x:num" x:fmla="=E26+15000">80000</td>
+          <td>2T</td>
+          <td>10T - 12T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">55</td>
+          <td x:num="x:num">55000</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num" x:fmla="=E27+15000">85000</td>
+          <td>2T</td>
+          <td>12T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">60</td>
+          <td x:num="x:num">60000</td>
+          <td x:num="x:num">75000</td>
+          <td x:num="x:num" x:fmla="=E28+15000">90000</td>
+          <td>2.5T</td>
+          <td>12T - 14T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">65</td>
+          <td x:num="x:num">65000</td>
+          <td x:num="x:num">80000</td>
+          <td x:num="x:num" x:fmla="=E29+15000">95000</td>
+          <td>3T</td>
+          <td>14T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">70</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num">85000</td>
+          <td x:num="x:num" x:fmla="=E30+15000">100000</td>
+          <td>3.5T</td>
+          <td>16T</td>
+        </tr>
+        
+        <tr>
+          <td><b>A611</b></td>
+          <td>&nbsp;</td>
+          <td>A</td>
+          <td x:num="x:num">25000</td>
+          <td x:num="x:num">52000</td>
+          <td x:num="x:num" x:fmla="=E31+15000">67000</td>
+          <td>.5T</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td>B</td>
+          <td x:num="x:num">30000</td>
+          <td x:num="x:num">45000</td>
+          <td x:num="x:num" x:fmla="=E32+15000">60000</td>
+          <td>1T</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td>C</td>
+          <td x:num="x:num">33000</td>
+          <td x:num="x:num">48000</td>
+          <td x:num="x:num" x:fmla="=E33+15000">63000</td>
+          <td>1.5T</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td>D</td>
+          <td x:num="x:num">40000</td>
+          <td x:num="x:num">52000</td>
+          <td x:num="x:num" x:fmla="=E34+15000">67000</td>
+          <td>2T</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td>E</td>
+          <td x:num="x:num">80000</td>
+          <td x:num="x:num">82000</td>
+          <td x:num="x:num" x:fmla="=E35+15000">97000</td>
+          <td>NA</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>A656</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">50</td>
+          <td x:num="x:num">50000</td>
+          <td x:num="x:num">60000</td>
+          <td x:num="x:num" x:fmla="=E36+15000">75000</td>
+          <td>1.5T</td>
+          <td>8T - 10T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">60</td>
+          <td x:num="x:num">60000</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num" x:fmla="=E37+15000">85000</td>
+          <td>&nbsp;</td>
+          <td>8T - 10T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">70</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num">80000</td>
+          <td x:num="x:num" x:fmla="=E38+15000">95000</td>
+          <td>&nbsp;</td>
+          <td>8T - 10T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">80</td>
+          <td x:num="x:num">80000</td>
+          <td x:num="x:num">95000</td>
+          <td x:num="x:num" x:fmla="=E39+15000">110000</td>
+          <td>1.5T</td>
+          <td>8T - 10T</td>
+        </tr>
+        
+        <tr>
+          <td><b>A715</b></td>
+          <td>A606</td>
+          <td x:num="x:num">50</td>
+          <td x:num="x:num">50000</td>
+          <td x:num="x:num">60000</td>
+          <td x:num="x:num" x:fmla="=E40+15000">75000</td>
+          <td>1T</td>
+          <td>10T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>A607</td>
+          <td x:num="x:num">60</td>
+          <td x:num="x:num">60000</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num" x:fmla="=E41+15000">85000</td>
+          <td>1.5T</td>
+          <td>8T - 10T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>A607</td>
+          <td x:num="x:num">70</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num">80000</td>
+          <td x:num="x:num" x:fmla="=E42+15000">95000</td>
+          <td>2T</td>
+          <td>10T</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">80</td>
+          <td x:num="x:num">80000</td>
+          <td x:num="x:num">90000</td>
+          <td x:num="x:num" x:fmla="=E43+15000">105000</td>
+          <td>2T</td>
+          <td>10T - 12T</td>
+        </tr>
+        
+        <tr>
+          <td><b>A907</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">30</td>
+          <td x:num="x:num">30000</td>
+          <td x:num="x:num">49000</td>
+          <td x:num="x:num" x:fmla="=E44+15000">64000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">33</td>
+          <td x:num="x:num">33000</td>
+          <td x:num="x:num">52000</td>
+          <td x:num="x:num" x:fmla="=E45+15000">67000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">36</td>
+          <td x:num="x:num">36000</td>
+          <td x:num="x:num">53000</td>
+          <td x:num="x:num" x:fmla="=E46+15000">68000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">40</td>
+          <td x:num="x:num">40000</td>
+          <td x:num="x:num">55000</td>
+          <td x:num="x:num" x:fmla="=E47+15000">70000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>AR360</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">177000</td>
+          <td x:num="x:num" x:fmla="=E48+15000">192000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>AR (235)</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num">115000</td>
+          <td x:num="x:num" x:fmla="=E49+15000">130000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>WELDEX</td>
+          <td x:num="x:num">130</td>
+          <td x:num="x:num">130000</td>
+          <td x:num="x:num">147000</td>
+          <td x:num="x:num">160000</td>
+          <td>4T</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">160</td>
+          <td x:num="x:num">160000</td>
+          <td x:num="x:num">181000</td>
+          <td x:num="x:num">225000</td>
+          <td>6T</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr bgcolor="#CCCCCC">
+          <td valign="bottom">ASTM<br />
+            Number</td>
+          <td>Other Number</td>
+          <td>Grade</td>
+          <td>Yield Str.</td>
+          <td>Min. Tensile</td>
+          <td>Max. Tensile</td>
+          <td>Min. Rad. </td>
+          <td width="65">Recom. Vee Die</td>
+        </tr>
+        
+        <tr>
+          <td  class="heading" colspan="8">STAINLESS STEEL</td>
+        </tr>
+        
+        <tr>
+          <td><b>A167</b></td>
+          <td>S30215</td>
+          <td>302B</td>
+          <td x:num="x:num">30000</td>
+          <td x:num="x:num">75000</td>
+          <td x:num="x:num" x:fmla="=E54+15000">90000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>S30800</td>
+          <td x:num="x:num">308</td>
+          <td x:num="x:num">30000</td>
+          <td x:num="x:num">75000</td>
+          <td x:num="x:num" x:fmla="=E55+15000">90000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td>&nbsp;</td>
+          <td>S30900</td>
+          <td x:num="x:num">309</td>
+          <td x:num="x:num">30000</td>
+          <td x:num="x:num">75000</td>
+          <td x:num="x:num" x:fmla="=E56+15000">90000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>S31000</td>
+          <td x:num="x:num">310</td>
+          <td x:num="x:num">30000</td>
+          <td x:num="x:num">75000</td>
+          <td x:num="x:num" x:fmla="=E57+15000">90000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>S33228</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">27000</td>
+          <td x:num="x:num">73000</td>
+          <td x:num="x:num" x:fmla="=E58+15000">88000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td>&nbsp;</td>
+          <td>S35315</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">39000</td>
+          <td x:num="x:num">94000</td>
+          <td x:num="x:num" x:fmla="=E59+15000">109000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td><b>A176</b></td>
+          <td>S32803</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">72000</td>
+          <td x:num="x:num">87000</td>
+          <td x:num="x:num" x:fmla="=E60+15000">102000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>S40300</td>
+          <td x:num="x:num">403</td>
+          <td x:num="x:num">30000</td>
+          <td x:num="x:num">70000</td>
+          <td x:num="x:num" x:fmla="=E61+15000">85000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>S42000</td>
+          <td x:num="x:num">420</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">100000</td>
+          <td x:num="x:num" x:fmla="=E62+15000">115000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>S44200</td>
+          <td x:num="x:num">442</td>
+          <td x:num="x:num">40000</td>
+          <td x:num="x:num">65000</td>
+          <td x:num="x:num" x:fmla="=E63+15000">80000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>S44600</td>
+          <td x:num="x:num">446</td>
+          <td x:num="x:num">40000</td>
+          <td x:num="x:num">65000</td>
+          <td x:num="x:num" x:fmla="=E64+15000">80000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>A666</b></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>A693</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">630</td>
+          <td x:num="x:num">160000</td>
+          <td x:num="x:num">185000</td>
+          <td x:num="x:num" x:fmla="=E66+15000">200000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">631</td>
+          <td x:num="x:num">55000</td>
+          <td x:num="x:num">150000</td>
+          <td x:num="x:num" x:fmla="=E67+15000">165000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">632</td>
+          <td x:num="x:num">65000</td>
+          <td x:num="x:num">150000</td>
+          <td x:num="x:num" x:fmla="=E68+15000">165000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">635</td>
+          <td x:num="x:num">75000</td>
+          <td x:num="x:num">120000</td>
+          <td x:num="x:num" x:fmla="=E69+15000">135000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>A887</b></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr bgcolor="#CCCCCC">
+          <td><strong> ASTM <br />
+            Number</strong></td>
+          <td><strong>Other Number </strong></td>
+          <td><strong>Grade</strong></td>
+          <td><strong>Yield Str. </strong></td>
+          <td><strong>Min. Tensile </strong></td>
+          <td><strong>Max. Tensile </strong></td>
+          <td><strong>Min. Rad. </strong></td>
+          <td width="65"><strong>Recom. Vee Die </strong></td>
+        </tr>
+        
+        <tr>
+          <div align="center"><td colspan="8" class="heading">ALUMINUM</div></td>
+        </tr>
+        
+        <tr>
+          <td><b>B209</b></td>
+          <td x:num="x:num">1100</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">14000</td>
+          <td x:num="x:num">24000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td x:num="x:num">3003</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">17000</td>
+          <td x:num="x:num">30000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td x:num="x:num">5005</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">18000</td>
+          <td x:num="x:num">30000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td x:num="x:num">5052</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">31000</td>
+          <td x:num="x:num">44000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td x:num="x:num">5083</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">40000</td>
+          <td x:num="x:num">59000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td x:num="x:num">5086</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">40000</td>
+          <td x:num="x:num">54000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td x:num="x:num">5454</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">36000</td>
+          <td x:num="x:num">47000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td x:num="x:num">2024</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">30000</td>
+          <td x:num="x:num">63000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td x:num="x:num">6061</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">20000</td>
+          <td x:num="x:num">42000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>B221</b></td>
+          <td x:num="x:num">6063</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">13000</td>
+          <td x:num="x:num">35000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+          <td><b>&nbsp;</b></td>
+          <td x:num="x:num">7075</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td x:num="x:num">33000</td>
+          <td x:num="x:num">83000</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+
+  </div></div></div>
+<div id="bottom_shadow">&nbsp;</div>
+<div id="shadow_left"><div id="shadow_right">
+  <div id="footer">
+    <div align="center" class="footer_txt">Offering Quality Equipment and Service Throughout Colorado and Wyoming Since 1973! </div>
+        <div id="bottom_nav">
+          <div align="center"><span class="footer_nav_txt"><a href="../index.html">HOME</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="../company.html">COMPANY</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="../products.html">PRODUCTS</a> &nbsp;&nbsp;| &nbsp;<a href="../applications.html">&nbsp;APPLICATIONS</a>&nbsp; &nbsp;| &nbsp;&nbsp;<a href="../used_equipment.html">USED EQUIPMENT</a>&nbsp; &nbsp;| &nbsp;&nbsp;<a href="../contact_us.html">CONTACT US</a></span></div>
+        </div>
+      <div id="copyright">
+      <div align="center" class="red_txt"><strong>© Copyright 2010 - 2015 Fabricating Equipment Sales Co. &nbsp;-&nbsp; Phone: 303-466-7341 &nbsp;-&nbsp; Email: info@fabricatingequipmentsales.com&nbsp;  - &nbsp;Website Design by <u><a href="http://justbysam.com/" target="_blank" class="external">Samantha Smith</a></u></strong></div>
+    </div>
+  </div>
+</div></div>
+<div id="bottom_shadow">&nbsp;</div></div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16062387-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30019650-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

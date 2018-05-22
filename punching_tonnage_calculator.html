@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fabricating Equipment Sales Co. | Punching Tonnage Calculator</title>
+<meta name="keywords" content="fabricating equipment sales, punching tonnage, punching tonnage calculator, tonnage calculator, metal thickness, steel thickness, tonnage, structural steel equipment, sheet metal fabricating, steel machines, fabricating equipment, Colorado, Wyoming" />
+
+<meta name="description" content="Fabricating Equipment Sales Co.'s Punching Tonnage Calculator will help you calculate how much tonnage is needed to punch round holes through a given thickness of metal." />
+
+<link href="main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<style>
+table.chart {
+	border-left: 1 solid #808080; 
+	border-top: 1 solid #808080; 
+	width:200px;
+	border-collapse: collapse;	
+	font-size:10pt;
+}
+
+table.chart td {
+	text-align: center;
+}
+.style17 {
+	color: #003366;
+	font-size: 24px;
+}
+.style18 {
+	font-size: 12px;
+	font-weight: bold;
+}
+</style>
+
+<script language=javascript>
+function clearAll() {
+        document.calc.input.value = ''
+        document.calc.screen.value=''
+        document.calc.screen1.value=''
+        document.calc.screen2.value=''
+}
+
+function steel() {
+	num = document.calc.screen1.value
+	num1 = document.calc.screen.value;
+
+	if (num < num1) { 
+	 alert(" WARNING !!!! The rule of thumb is that the hole diameter should not be smaller than the material thickness that is being punched")
+	return
+	
+}
+
+	document.calc.screen2.value=(document.calc.screen1.value)*(120)*(document.calc.screen.value)
+
+
+}
+
+function sqr() {
+	num = document.calc.screen1.value
+	num1 = document.calc.screen.value;
+
+	if (num < num1)  {
+	 alert(" WARNING !!!!The rule of thumb is that the hole diameter should not be smaller than the material thickness that is being punched, Please reinsert new values")
+	return 
+	
+}
+               
+        document.calc.screen2.value=(document.calc.screen1.value)*(80)*(document.calc.screen.value)
+      
+      
+}
+
+function bend() {
+
+	
+	document.calc.answer.value=(((document.calc.radi.value)*(.01743))+((document.calc.thick.value)*(.0078)))*(document.calc.deg.value)
+}
+
+function clearbend() {
+
+	document.calc.answer.value=' '
+	document.calc.radi.value=' '
+	document.calc.thick.value=' ' 
+	document.calc.deg.value=' ' 
+}
+</script>
+
+</head>
+
+<body onload="MM_preloadImages('images/home_button_active.jpg','images/used_button_active.jpg','images/contact_button_active3.jpg','images/company_button_active2.jpg','images/type2_button_active.jpg','images/application_button_active.jpg','images/products_button_active.jpg','images/applications_nav_button_active2.jpg')">
+<div id="shadow_left"><div id="shadow_right"><div id="header" alt="Fabricating Equipment Sales - Structural Steel and Sheet Metal Fabricating Equipment"></div>
+<div class="style1" id="navigation">
+<a href="index2.html"><img src="images/home_button.jpg" alt="HOME" border="0" id="Image1" onmouseover="MM_swapImage('Image1','','images/home_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="company.html"><img src="images/company_button.jpg" alt="COMPANY" width="158" height="27" border="0" id="Image2" onmouseover="MM_swapImage('Image2','','images/company_button_active2.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="products.html"><img src="images/products_button.jpg" alt="PRODUCTS" width="158" height="27" border="0" id="Image3" onmouseover="MM_swapImage('Image3','','images/products_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="applications.html"><img src="images/applications_nav_button.jpg" alt="APPLICATIONS" width="158" height="27" border="0" id="Image4" onmouseover="MM_swapImage('Image4','','images/applications_nav_button_active2.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="used_equipment.html"><img src="images/used_button.jpg" alt="USED EQUIPMENT" width="158" height="27" border="0" id="Image5" onmouseover="MM_swapImage('Image5','','images/used_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="contact_us.html"><img src="images/contact_button.jpg" alt="CONTACT US" width="160" height="27" border="0" id="Image6" onmouseover="MM_swapImage('Image6','','images/contact_button_active3.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><img src="images/divider.jpg" width="950" height="8" /></div>
+  <div id="content2">
+    <h1 align="left" class="style17">Punching Tonnage Calculator</h1>
+			
+	<form name="calc">
+   <center>
+                        <table width="90%" border="0">
+                        <tr>
+                              <td valign="top"><p align="left"><b><font color="#CC0000" size="2" face="Arial, Helvetica, sans-serif">Tonnage 
+                                for Round Punches</font> </b> </p>
+                                <p align="left"> <font size="2" face="Arial, Helvetica, sans-serif" color="#000000">The 
+                                  following form will help you calculate how much tonnage 
+                                  is needed to punch round holes through a given thickness 
+                                  of metal. There are some limitations that you should be 
+                                  aware of. If you do not need a flat slug you can lower 
+                                  the tonnage required by adding a shear cut to the punch. 
+                                  Maxium amount of shear will cut tonnage in half as long 
+                                  as you have enough stroke movement on the punch. All input 
+                                  into the form below should be placed in decimal equivalants.
+                                  <select name="select">
+
+                                        <option selected="selected">1/64 = 0.015625 </option>
+                                    <option>1/32 = 0.03125 </option>
+                                    <option>3/64 = 0.046875 </option>
+                                    <option>1/16 = 0.0625 </option>
+                                    <option>5/64 = 0.078125 </option>
+                                    <option>3/32 = 0.09375 </option>
+
+                                    <option>7/64 = 0.109375 </option>
+                                    <option>1/8 = 0.125 </option>
+                                    <option>9/64 = 0.140625 </option>
+                                    <option>5/32 = 0.15625 </option>
+                                    <option>11/64 = 0.171875 </option>
+                                    <option>3/16 = 0.1875 </option>
+
+                                    <option>13/64 = 0.203125 </option>
+                                    <option>7/32 = 0.21875 </option>
+                                    <option>15/64 = 0.234375 </option>
+                                    <option>1/4 = 0.25 </option>
+                                    <option>17/64 = 0.265625 </option>
+                                    <option>9/32 = 0.28125 </option>
+
+                                    <option>19/64 = 0.296875 </option>
+                                    <option>5/16 = 0.3125 </option>
+                                    <option>21/64 = 0.328125 </option>
+                                    <option>11/32 = 0.34375 </option>
+                                    <option>23/64 = 0.359375 </option>
+                                    <option>3/8 = 0.375 </option>
+
+                                    <option>25/64 = 0.390625 </option>
+                                    <option>13/32 = 0.40625 </option>
+                                    <option>27/64 = 0.421875 </option>
+                                    <option>7/16 = 0.4375 </option>
+                                    <option>29/64 = 0.453125 </option>
+                                    <option>15/32 = 0.46875 </option>
+
+                                    <option>31/64 = 0.484375 </option>
+                                    <option>1/2 = 0.5 </option>
+                                    <option>33/64 = 0.515625 </option>
+                                    <option>17/32 = 0.53125 </option>
+                                    <option>35/64 = 0.546875 </option>
+                                    <option>9/16 = 0.5625 </option>
+
+                                    <option>37/64 = 0.578125 </option>
+                                    <option>19/32 = 0.59375 </option>
+                                    <option>39/64 = 0.609375 </option>
+                                    <option>5/8 = 0.625 </option>
+                                    <option>41/64 = 0.640625 </option>
+                                    <option>21/32 = 0.65625 </option>
+
+                                    <option>43/64 = 0.671875 </option>
+                                    <option>11/16 = 0.6875 </option>
+                                    <option>45/64 = 0.703125 </option>
+                                    <option>23/32 = 0.71875 </option>
+                                    <option>47/64 = 0.734375 </option>
+                                    <option>3/4 = 0.75 </option>
+
+                                    <option>49/64 = 0.765625 </option>
+                                    <option>25/32 = 0.78125 </option>
+                                    <option>51/64 = 0.796875 </option>
+                                    <option>13/16 = 0.8125 </option>
+                                    <option>53/64 = 0.828125 </option>
+                                    <option>27/32 = 0.84375 </option>
+
+                                    <option>55/64 = 0.859375 </option>
+                                    <option>7/8 = 0.875 </option>
+                                    <option>57/64 = 0.890625 </option>
+                                    <option>29/32 = 0.90625 </option>
+                                    <option>59/64 = 0.921875 </option>
+                                    <option>15/16 = 0.9375 </option>
+
+                                    <option>61/64 = 0.953125 </option>
+                                    <option>31/32 = 0.96875 </option>
+                                    <option>63/64 = 0.984375 </option>
+                                    <option>1 = 1.000 </option>
+                                  </select>
+                                  Following are thickness tolerances on galvanized steel.
+  <select name="select2">
+
+    <option selected="selected">10 gauge = .1382&quot; </option>
+    <option>11 gauge = .1233&quot; </option>
+    <option>12 gauge = .1084&quot; </option>
+    <option>13 gauge = .0934&quot; </option>
+    <option>14 gauge = .0785&quot; </option>
+
+    <option>15 gauge = .0710&quot; </option>
+    <option>16 gauge = .0635&quot; </option>
+    <option>17 gauge = .0575&quot; </option>
+    <option>18 gauge = .0516&quot; </option>
+    <option>19 gauge = .0456&quot; </option>
+
+    <option>20 gauge = .0396&quot; </option>
+    <option>21 gauge = .0366&quot; </option>
+    <option>22 gauge = .0336&quot; </option>
+    <option>23 gauge = .0306&quot; </option>
+    <option>24 gauge = .0276&quot; </option>
+
+    <option>25 gauge = .0247&quot; </option>
+    <option>26 gauge = .0217&quot; </option>
+    <option>27 gauge = .0202&quot; </option>
+    <option>28 gauge = .0187&quot; </option>
+    <option>29 gauge = .0172&quot; </option>
+
+    <option>30 gauge = .0157&quot; </option>
+  </select>
+                                  Note: for holes 5/16&quot; or less, the material thickness 
+                                  can not exceed the diameter of the hole being punch. </font> </p>
+                                <p align="left">&nbsp; </p>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                  <tr>
+                                    <td valign="middle"><div align="right"><font face="Arial, Helvetica, sans-serif" size="2" color="#000000"><b>Diameter 
+                                      of Hole:&nbsp;&nbsp;&nbsp;</b></font></div></td>
+                                    <td><font face="Arial, Helvetica, sans-serif" size="2" color="#000000">
+                                      <input type="text"  name="screen1" size="10" />
+                                      <i>Inches (decimel equivalent)</i> </font></td>
+                                  </tr>
+                                  <tr>
+
+                                    <td valign="middle"><div align="right"></div></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td valign="middle"><p align="right"><font face="Arial, Helvetica, sans-serif" size="2" color="#000000"><b> </b></font> <font face="Arial, Helvetica, sans-serif" size="2" color="#000000"><b>Material 
+                                      Thickness:&nbsp;&nbsp;</b></font> </p></td>
+                                    <td><font face="Arial, Helvetica, sans-serif" size="2" color="#000000">
+                                      <input type="text"  name="screen" size="10" />
+
+                                      <i>Inches (decimel equivalent)</i></font></td>
+                                  </tr>
+                                  <tr>
+                                    <td valign="middle"><div align="right"></div></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td valign="middle"><div align="right"><font face="Arial, Helvetica, sans-serif" size="2" color="#000000"><b><font color="#CC0000">Tonnage 
+                                      Required:</font><font color="#CC0000"><font color="#000000">&nbsp;&nbsp;</font></font></b></font></div></td>
+
+                                    <td><font face="Arial, Helvetica, sans-serif" size="2" color="#000000">
+                                      <input type="text" readonly name="screen2" size="10" />
+                                      <i>Tons</i> </font></td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td height="34" colspan="2"><div align="center"><font face="Arial, Helvetica, sans-serif" size="2" color="#000000"> </font><font face="Arial, Helvetica, sans-serif" size="2">
+                                        <input type="button" name="square3"  value="Tonnage for Stainless Steel " onclick="steel()" />
+                                        </font><font face="Arial, Helvetica, sans-serif" size="2" color="#000000">
+                                        <input type="button" name="square2" value="Tonnage for Mild Steel " onclick="sqr()" />
+                                    </font></div></td>
+                                  </tr>
+                                  <tr>
+
+                                    <td height="34" colspan="2"><div align="center"><font face="Arial, Helvetica, sans-serif" size="2">
+                                        <input type="button" name="clear2" value="CLEAR" onclick="clearAll()" />
+                                    </font></div></td>
+                                  </tr>
+                                </table>
+                                <div align="left"><font face="Arial, Helvetica, sans-serif" size="2">
+                                  <input type="hidden" name="input" size="16" />
+                                  <input type="hidden" name="memory" value="0" size="16" />
+                                </font> </div>
+                              <p align="center"></p></td>
+                            </tr>
+                        </table>
+      </center>
+                      </form>
+
+
+  </div></div></div>
+<div id="bottom_shadow">&nbsp;</div>
+<div id="shadow_left"><div id="shadow_right">
+  <div id="footer">
+    <div align="center" class="footer_txt">Offering Quality Equipment and Service Throughout Colorado and Wyoming Since 1973! </div>
+        <div id="bottom_nav">
+          <div align="center"><span class="footer_nav_txt"><a href="../index.html">HOME</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="../company.html">COMPANY</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="../products.html">PRODUCTS</a> &nbsp;&nbsp;| &nbsp;<a href="../applications.html">&nbsp;APPLICATIONS</a>&nbsp; &nbsp;| &nbsp;&nbsp;<a href="../used_equipment.html">USED EQUIPMENT</a>&nbsp; &nbsp;| &nbsp;&nbsp;<a href="../contact_us.html">CONTACT US</a></span></div>
+        </div>
+      <div id="copyright">
+      <div align="center" class="red_txt"><strong>© Copyright 2010 - 2015 Fabricating Equipment Sales Co. &nbsp;-&nbsp; Phone: 303-466-7341 &nbsp;-&nbsp; Email: info@fabricatingequipmentsales.com&nbsp;  - &nbsp;Website Design by <u><a href="http://justbysam.com/" target="_blank" class="external">Samantha Smith</a></u></strong></div>
+    </div>
+  </div>
+</div></div>
+<div id="bottom_shadow">&nbsp;</div></div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16062387-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30019650-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

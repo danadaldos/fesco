@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fabricating Equipment Sales Co. | Bend Allowance Calculator</title>
+<meta name="keywords" content="fabricating equipment sales, metal, steel, bend allowance, bend allowance calculator, structural steel equipment, sheet metal fabricating, steel machines, fabricating equipment, Colorado, Wyoming" />
+
+<meta name="description" content="Fabricating Equipment Sales Co.'s Bend Allowance Calculator determines the amount of metal to be added to the total layout" />
+
+<link href="main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<style>
+table.chart {
+	border-left: 1 solid #808080; 
+	border-top: 1 solid #808080; 
+	width:200px;
+	border-collapse: collapse;	
+	font-size:10pt;
+}
+
+table.chart td {
+	text-align: center;
+}
+.style17 {
+	color: #003366;
+	font-size: 24px;
+}
+.style18 {
+	font-size: 12px;
+	font-weight: bold;
+}
+</style>
+<script language=javascript>
+function clearAll() {
+        document.calc.input.value = ''
+        document.calc.screen.value=''
+        document.calc.screen1.value=''
+        document.calc.screen2.value=''
+}
+
+function steel() {
+	num = document.calc.screen1.value
+	num1 = document.calc.screen.value;
+
+	if (num < num1) { 
+	 alert(" WARNING !!!! The rule of thumb is that the hole diameter should not be smaller than the material thickness that is being punched")
+	return
+	
+}
+
+	document.calc.screen2.value=(document.calc.screen1.value)*(120)*(document.calc.screen.value)
+
+
+}
+
+function sqr() {
+	num = document.calc.screen1.value
+	num1 = document.calc.screen.value;
+
+	if (num < num1)  {
+	 alert(" WARNING !!!!The rule of thumb is that the hole diameter should not be smaller than the material thickness that is being punched, Please reinsert new values")
+	return 
+	
+}
+               
+        document.calc.screen2.value=(document.calc.screen1.value)*(80)*(document.calc.screen.value)
+      
+      
+}
+
+function bend() {
+
+	
+	document.calc.answer.value=(((document.calc.radi.value)*(.01743))+((document.calc.thick.value)*(.0078)))*(document.calc.deg.value)
+}
+
+function clearbend() {
+
+	document.calc.answer.value=' '
+	document.calc.radi.value=' '
+	document.calc.thick.value=' ' 
+	document.calc.deg.value=' ' 
+}
+
+</script>
+
+</head>
+
+<body onload="MM_preloadImages('images/home_button_active.jpg','images/used_button_active.jpg','images/contact_button_active3.jpg','images/company_button_active2.jpg','images/type2_button_active.jpg','images/application_button_active.jpg','images/products_button_active.jpg','images/applications_nav_button_active2.jpg')">
+<div id="shadow_left"><div id="shadow_right"><div id="header" alt="Fabricating Equipment Sales - Structural Steel and Sheet Metal Fabricating Equipment"></div>
+<div class="style1" id="navigation">
+<a href="index2.html"><img src="images/home_button.jpg" alt="HOME" border="0" id="Image1" onmouseover="MM_swapImage('Image1','','images/home_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="company.html"><img src="images/company_button.jpg" alt="COMPANY" width="158" height="27" border="0" id="Image2" onmouseover="MM_swapImage('Image2','','images/company_button_active2.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="products.html"><img src="images/products_button.jpg" alt="PRODUCTS" width="158" height="27" border="0" id="Image3" onmouseover="MM_swapImage('Image3','','images/products_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="applications.html"><img src="images/applications_nav_button.jpg" alt="APPLICATIONS" width="158" height="27" border="0" id="Image4" onmouseover="MM_swapImage('Image4','','images/applications_nav_button_active2.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="used_equipment.html"><img src="images/used_button.jpg" alt="USED EQUIPMENT" width="158" height="27" border="0" id="Image5" onmouseover="MM_swapImage('Image5','','images/used_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="contact_us.html"><img src="images/contact_button.jpg" alt="CONTACT US" width="160" height="27" border="0" id="Image6" onmouseover="MM_swapImage('Image6','','images/contact_button_active3.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><img src="images/divider.jpg" width="950" height="8" /></div>
+  <div id="content2">
+    <h1 align="left" class="style17">Bend Allowance Calculator</h1>
+			
+	 <form name="calc">
+                      <p> 
+        <center>
+                          <table width="90%" border="0" cellspacing="5">
+                            <tr>
+                              <td><p align="left" class="style18"><font color="#CC0000" face="Arial, Helvetica, sans-serif">Bend 
+                                Allowances</font> </p>
+                                <p align="left"> <font size="2" face="Arial, Helvetica, sans-serif">
+                                  Bend allowance is the amount of metal to be added to the total 
+                                  layout. The most important considerations when bending 
+                                  metal is the min. bend radius. When bends are made smaller 
+                                  than the required min. radius, metal will crack at the 
+                                  outside heel of the bend. The <font color="#CC0000">min. radius</font>
+                                  of a bend is determined by the hardness and thickness 
+                                  of the metal. There are four methods for finding bend 
+                                  allowances. In the form below uses the <font color="#CC0000">empirical 
+                                  formula</font>. It is the most accurate because it takes into 
+                                  account the shifting of the neutral line, slightly inward, 
+                                  when the metal is bent. The following form must be filled 
+                                  in with decimal equivalants.</font>
+                                 
+                         <select name="select2">
+                            <option selected="selected">1/64 = 0.015625 </option>
+                            <option>1/32 = 0.03125 </option>
+                            <option>3/64 = 0.046875 </option>
+                            <option>1/16 = 0.0625 </option>
+                            <option>5/64 = 0.078125 </option>
+
+                            <option>3/32 = 0.09375 </option>
+                            <option>7/64 = 0.109375 </option>
+                            <option>1/8 = 0.125 </option>
+                            <option>9/64 = 0.140625 </option>
+                            <option>5/32 = 0.15625 </option>
+                            <option>11/64 = 0.171875 </option>
+
+                            <option>3/16 = 0.1875 </option>
+                            <option>13/64 = 0.203125 </option>
+                            <option>7/32 = 0.21875 </option>
+                            <option>15/64 = 0.234375 </option>
+                            <option>1/4 = 0.25 </option>
+                            <option>17/64 = 0.265625 </option>
+
+                            <option>9/32 = 0.28125 </option>
+                            <option>19/64 = 0.296875 </option>
+                            <option>5/16 = 0.3125 </option>
+                            <option>21/64 = 0.328125 </option>
+                            <option>11/32 = 0.34375 </option>
+                            <option>23/64 = 0.359375 </option>
+
+                            <option>3/8 = 0.375 </option>
+                            <option>25/64 = 0.390625 </option>
+                            <option>13/32 = 0.40625 </option>
+                            <option>27/64 = 0.421875 </option>
+                            <option>7/16 = 0.4375 </option>
+                            <option>29/64 = 0.453125 </option>
+
+                            <option>15/32 = 0.46875 </option>
+                            <option>31/64 = 0.484375 </option>
+                            <option>1/2 = 0.5 </option>
+                            <option>33/64 = 0.515625 </option>
+                            <option>17/32 = 0.53125 </option>
+                            <option>35/64 = 0.546875 </option>
+
+                            <option>9/16 = 0.5625 </option>
+                            <option>37/64 = 0.578125 </option>
+                            <option>19/32 = 0.59375 </option>
+                            <option>39/64 = 0.609375 </option>
+                            <option>5/8 = 0.625 </option>
+                            <option>41/64 = 0.640625 </option>
+
+                            <option>21/32 = 0.65625 </option>
+                            <option>43/64 = 0.671875 </option>
+                            <option>11/16 = 0.6875 </option>
+                            <option>45/64 = 0.703125 </option>
+                            <option>23/32 = 0.71875 </option>
+                            <option>47/64 = 0.734375 </option>
+
+                            <option>3/4 = 0.75 </option>
+                            <option>49/64 = 0.765625 </option>
+                            <option>25/32 = 0.78125 </option>
+                            <option>51/64 = 0.796875 </option>
+                            <option>13/16 = 0.8125 </option>
+                            <option>53/64 = 0.828125 </option>
+
+                            <option>27/32 = 0.84375 </option>
+                            <option>55/64 = 0.859375 </option>
+                            <option>7/8 = 0.875 </option>
+                            <option>57/64 = 0.890625 </option>
+                            <option>29/32 = 0.90625 </option>
+                            <option>59/64 = 0.921875 </option>
+
+                            <option>15/16 = 0.9375 </option>
+                            <option>61/64 = 0.953125 </option>
+                            <option>31/32 = 0.96875 </option>
+                            <option>63/64 = 0.984375 </option>
+                            <option>1 = 1.000 </option>
+                          </select>
+								</p>
+                                <p align="left">&nbsp; </p>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><div align="right"><font color="#000000"><b><font face="Arial, Helvetica, sans-serif" size="2">Radius 
+                                      of Bend:&nbsp;&nbsp;</font></b></font></div></td>
+                                    <td><font color="#000000"><b><font face="Arial, Helvetica, sans-serif" size="2">
+                                      <input type="text" name="radi" size="10" />
+
+                                      </font></b><font face="Arial, Helvetica, sans-serif" size="2"><i>Inches 
+                                        (decimel equivalent)</i> </font></font></td>
+                                  </tr>
+                                  <tr>
+                                    <td><div align="right">&nbsp;&nbsp;</div></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td><div align="right"><font color="#000000"><b><font face="Arial, Helvetica, sans-serif" size="2">Thickness 
+                                      of Material:&nbsp;&nbsp;</font></b></font></div></td>
+
+                                    <td><font color="#000000"><b><font face="Arial, Helvetica, sans-serif" size="2">
+                                      <input type="text" name="thick" size="10" />
+                                    </font></b><font face="Arial, Helvetica, sans-serif" size="2"> <i>Inches (decimel equivalent)</i></font></font></td>
+                                  </tr>
+                                  <tr>
+                                    <td><div align="right"></div></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td><div align="right"><font color="#000000"><b><font face="Arial, Helvetica, sans-serif" size="2">Angle 
+                                      of Bend:&nbsp;&nbsp;</font></b></font></div></td>
+                                    <td><font color="#000000"><b><font face="Arial, Helvetica, sans-serif" size="2">
+                                      <input type="text" name="deg" size="10" />
+                                    </font></b><font face="Arial, Helvetica, sans-serif" size="2"><i>(degrees)</i></font></font><font face="Arial, Helvetica, sans-serif" size="2"></font></td>
+                                  </tr>
+                                  <tr>
+                                    <td><div align="right"></div></td>
+
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td><div align="right"><font face="Arial, Helvetica, sans-serif" size="2"><b><font color="#CC0000">Bend 
+                                      Allowance:&nbsp;&nbsp;</font></b></font></div></td>
+                                    <td><font face="Arial, Helvetica, sans-serif" size="2">
+                                      <input type="text" readonly name="answer" size="10" />
+                                      <i>Inches</i> </font> <font face="Arial, Helvetica, sans-serif" size="2"></font></td>
+                                  </tr>
+                                   <tr>
+                                    <td><div align="right"></div></td>
+
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td align="right"><div align="right"><input type="button" name="clear" value="CLEAR" onclick="clearbend()" /></div></td>
+                                    <td><font face="Arial, Helvetica, sans-serif" size="2">
+                                      <input type="button" name="square"  value="Calculate Bend Allowance  " onclick="bend()" />
+                                    </font></td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+
+                                    <td><font face="Arial, Helvetica, sans-serif" size="2">
+                                      
+                                    </font></td>
+                                  </tr>
+                                </table>
+                              <div align="left"><font face="Arial, Helvetica, sans-serif" size="2">
+                                  <input type="hidden" name="input" size="16" />
+                                  <input type="hidden" name="memory" value="0" size="16" />
+                                </font> </div>
+                              </td>
+                            </tr>
+                          </table>
+                       <!--   
+                          <table class="chart" border="1" cellpadding="3" cellspacing="5" style="font-size:10pt; padding:3px;">
+                          	<tr>
+                          		<td colspan="2" bgcolor="#990022" style="color: #FFFFFF;">
+                          			CONVERSION CHART
+                          		</td>
+                          	</tr>
+                          	<tr bgcolor="#CCCCCC">
+                          		<td>Fraction</td>
+                          		<td>Decimal Equiv.</td>
+                          	</tr>
+                          	<tr><td>1/64</td><td>0.015625</td></tr>
+                          	<tr><td>1/32</td><td>0.03125</td></tr>
+                          	<tr><td>3/64</td><td>0.046875</td></tr>
+                          	<tr><td>1/16</td><td>0.0625</td></tr>
+                          	<tr><td>5/64</td><td>0.078125</td></tr>
+                          	
+                          	<tr><td>3/32</td><td>0.09375</td></tr>
+                          	<tr><td>7/64</td><td>0.109375</td></tr>
+                          	<tr><td>1/8</td><td>0.125</td></tr>
+                          	<tr><td>9/64</td><td>0.140625</td></tr>
+                          	<tr><td>5/32</td><td>0.15625</td></tr>
+                          	
+                          	<tr><td>11/64</td><td>0.171875</td></tr>
+                          	<tr><td>3/16</td><td>0.1875</td></tr>
+                          	<tr><td>13/64</td><td>0.203125</td></tr>
+                          	<tr><td>7/32</td><td>0.21875</td></tr>
+                          	<tr><td>15/64</td><td>0.234375</td></tr>
+                          	
+                          	<tr><td>1/4</td><td>0.25</td></tr>
+                          	<tr><td>17/64</td><td>0.265625</td></tr>
+                          	<tr><td>9/32</td><td>0.28125</td></tr>
+                          	<tr><td>19/64</td><td>0.296875</td></tr>
+                          	<tr><td>5/16</td><td>0.3125</td></tr>
+                          	
+                          	<tr><td>21/64</td><td>0.328125</td></tr>
+                          	<tr><td>11/32</td><td>0.34375</td></tr>
+                          	<tr><td>23/64</td><td>0.359375</td></tr>
+                          	<tr><td>3/8</td><td>0.375</td></tr>
+                          	<tr><td>25/64</td><td>0.390625</td></tr>
+                          	
+                          	<tr><td>13/32</td><td>0.40625</td></tr>
+                          	<tr><td>27/64</td><td>0.421875</td></tr>
+                          	<tr><td>7/16</td><td>0.4375</td></tr>
+                          	<tr><td>29/64</td><td>0.453125</td></tr>
+                          	<tr><td>15/32</td><td>0.46875</td></tr>
+                          	
+                          	<tr><td>31/64</td><td>0.484375</td></tr>
+                          	<tr><td>1/2</td><td>0.5</td></tr>
+                          	<tr><td>33/64</td><td>0.515625</td></tr>
+                          	<tr><td>17/32</td><td>0.53125</td></tr>
+                          	<tr><td>35/64</td><td>0.546875</td></tr>
+                          	
+                          	<tr><td>9/16</td><td>0.5625</td></tr>
+                          	<tr><td>37/64</td><td>0.578125</td></tr>
+                          	<tr><td>19/32</td><td>0.59375</td></tr>
+                          	<tr><td>39/64</td><td>0.609375</td></tr>
+                          	<tr><td>5/8</td><td>0.625</td></tr>
+                          	
+                          	<tr><td>41/64</td><td>0.640625</td></tr>
+                          	<tr><td>21/32</td><td>0.65625</td></tr>
+                          	<tr><td>43/64</td><td>0.671875</td></tr>
+                          	<tr><td>11/16</td><td>0.6875</td></tr>
+                          	<tr><td>45/64</td><td>0.703125</td></tr>
+                          	
+                          	<tr><td>23/32</td><td>0.71875</td></tr>
+                          	<tr><td>47/64</td><td>0.734375</td></tr>
+                          	<tr><td>3/4</td><td>0.75</td></tr>
+                          	<tr><td>49/64</td><td>0.765625</td></tr>
+                          	<tr><td>25/32</td><td>0.78125</td></tr>
+                          	
+                          	<tr><td>51/64</td><td>0.796875</td></tr>
+                          	<tr><td>13/16</td><td>0.8125</td></tr>
+                          	<tr><td>53/64</td><td>0.828125</td></tr>
+                          	<tr><td>27/32</td><td>0.84375</td></tr>
+                          	<tr><td>55/64</td><td>0.859375</td></tr>
+                          	
+                          	<tr><td>7/8</td><td>0.875</td></tr>
+                          	<tr><td>57/64</td><td>0.890625</td></tr>
+                          	<tr><td>29/32</td><td>0.90625</td></tr>
+                          	<tr><td>59/64</td><td>0.921875</td></tr>
+                          	<tr><td>15/16</td><td>0.9375</td></tr>
+                          	
+                          	<tr><td>61/64</td><td>0.953125</td></tr>
+                          	<tr><td>31/32</td><td>0.96875</td></tr>
+                          	<tr><td>63/64</td><td>0.984375</td></tr>
+                          	<tr><td>1</td><td>1.000</td></tr>
+                          </table>
+							-->
+        </center>
+
+                      </p>
+</form>
+
+  </div></div></div>
+<div id="bottom_shadow">&nbsp;</div>
+<div id="shadow_left"><div id="shadow_right">
+  <div id="footer">
+    <div align="center" class="footer_txt">Offering Quality Equipment and Service Throughout Colorado and Wyoming Since 1973! </div>
+        <div id="bottom_nav">
+          <div align="center"><span class="footer_nav_txt"><a href="../index.html">HOME</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="../company.html">COMPANY</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="../products.html">PRODUCTS</a> &nbsp;&nbsp;| &nbsp;<a href="../applications.html">&nbsp;APPLICATIONS</a>&nbsp; &nbsp;| &nbsp;&nbsp;<a href="../used_equipment.html">USED EQUIPMENT</a>&nbsp; &nbsp;| &nbsp;&nbsp;<a href="../contact_us.html">CONTACT US</a></span></div>
+        </div>
+      <div id="copyright">
+      <div align="center" class="red_txt"><strong>© Copyright 2010 - 2015 Fabricating Equipment Sales Co. &nbsp;-&nbsp; Phone: 303-466-7341 &nbsp;-&nbsp; Email: info@fabricatingequipmentsales.com&nbsp;  - &nbsp;Website Design by <u><a href="http://justbysam.com/" target="_blank" class="external">Samantha Smith</a></u></strong></div>
+    </div>
+  </div>
+</div></div>
+<div id="bottom_shadow">&nbsp;</div></div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16062387-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30019650-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

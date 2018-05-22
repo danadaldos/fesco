@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fabricating Equipment Sales Co. | Plasma Cutting Tables | Vicon Machinery</title>
+<meta name="keywords" content="fabricating equipment sales, plasma cutting tables, precision cutting torches, steel cutting, steel cutting torches, plasma steel cutting, steel cutting torch, plasma cutting torch, plasma cutting system, CNC Plasma Table, Fabricating Software, Precision Plasma Torch, Plasma Torch, CNC Plasma Cutting, CNC Plasma Cutter, CNC Plasma Cutting Table, CNC Plasma Cutting System, CNC Plasma Cutting Machine, Vicon Machinery, structural steel equipment, sheet metal fabricating, steel machines, fabricating equipment, Colorado, Wyoming" />
+
+<meta name="description" content="Fabricating Equipment Sales Co. offers High Precision Plasma Cutting Tables from Plasma Automation's Vicon Machinery. View detailed information on Precision Cutting Torches." />
+
+<link href="../main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<script src="../AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript">
+window.onload=playVideo;
+function playVideo() {
+if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)))
+{
+document.getElementById('MacVideo').style.display= '';
+}
+else
+{
+document.getElementById('WinVideo').style.display='';
+}
+}
+</script>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+//////////////////// SEND RESULTS TO DATABASE
+window.onbeforeunload = function() {
+        document.getElementById('justificationCalculator').submit();
+    };
+    $(document).ready(function() {
+        $('form').submit(function() { window.onbeforeunload = null; });
+    });
+//////////////////////////////////////////////
+
+function addCommas(nStr) {
+  nStr += '';
+  x = nStr.split('.');
+  x1 = x[0];
+  x2 = x.length > 1 ? '.' + x[1] : '';
+  var rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+  }
+  return x1 + x2;
+}
+
+function getSheetWeight(thickness) {
+  if(thickness >= .000 && thickness <= .019) { var sheetWeight = .75; } 	// 2667
+  if(thickness >= .020 && thickness <= .024) { var sheetWeight = 1; }		// 2000
+  if(thickness >= .025 && thickness <= .030) { var sheetWeight = 1.25; }	// 1600
+  if(thickness >= .031 && thickness <= .036) { var sheetWeight = 1.5; }		// 1333
+  if(thickness >= .037 && thickness <= .048) { var sheetWeight = 2; }		// 1000
+  if(thickness >= .049 && thickness <= .060) { var sheetWeight = 2.5; }		// 800
+  if(thickness >= .061) { var sheetWeight = 2.5; }
+  return sheetWeight * 50;
+}
+
+function calcNumbers() {
+  //// CALCULATE METAL THICKNESS /////////////////////////////////////////////////////////////////////////////////
+  var mt019 = .019 * document.getElementById('mt019').value;
+  var mt024 = .024 * document.getElementById('mt024').value;
+  var mt030 = .030 * document.getElementById('mt030').value;
+  var mt036 = .036 * document.getElementById('mt036').value;
+  var mt048 = .048 * document.getElementById('mt048').value;
+  var mt060 = .060 * document.getElementById('mt060').value;
+  var metalThickness = ((parseFloat(mt019) + parseFloat(mt024) + parseFloat(mt030) + parseFloat(mt036) + parseFloat(mt048) + parseFloat(mt060)) / 100).toFixed(3);
+  
+  var metalPercentage = parseFloat(document.getElementById('mt019').value) + parseFloat(document.getElementById('mt024').value) + parseFloat(document.getElementById('mt030').value) + parseFloat(document.getElementById('mt036').value) + parseFloat(document.getElementById('mt048').value) + parseFloat(document.getElementById('mt060').value);
+  
+  document.getElementById('metalThickness').innerHTML = "<strong>" + metalPercentage + "%</strong>";
+  if(metalPercentage > 100) { document.getElementById('metalThickness').innerHTML = "<strong><font color='red'>" + metalPercentage + "%</strong> - Total can't exceed 100%</font>"; }
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  // GET VALUES
+  var annualLbs = document.getElementById('annualLbs').value.replace(/[^0-9]/g,"");
+  var hourlyRate = document.getElementById('hourlyRate').value;
+//  var metalThickness = document.getElementById('metalThickness').value;
+  var linerThickness = document.getElementById('linerThickness').value;
+  var costPerRoll = document.getElementById('costPerRoll').value;
+  var percentageDuct = document.getElementById('percentageDuct').value/100;
+  var costPerPoundSheet = document.getElementById('costPerPoundSheet').value;
+  var poundMultiplier = annualLbs / 1000000;
+  var laborMultiplier = 15 * metalThickness + .548;
+  var metalMultiplier = 124.6165 * (1 / metalThickness);
+  var linerMultiplier = 174.0966 * (1 / linerThickness);
+  var linerRatio = metalMultiplier / linerMultiplier;
+    
+  // CALCULATIONS
+  var shearBlankMins = 0.5;
+  var layoutPatternMins = 2.5 * laborMultiplier;
+  var cutPatternMins = 2.5 * laborMultiplier;
+  var cutAcousticalLiningMins = .5 * laborMultiplier * 2;
+  var shearBlankSecs = 0;
+  var programNestSecs = layoutPatternMins * 7;
+  var cutPatternSecs = cutPatternMins * 1.2 * 12;
+  var cutAcousticalLiningSecs = cutAcousticalLiningMins * 3.2 * 12;
+  
+  document.getElementById('shearBlankMins').innerHTML = shearBlankMins;
+  document.getElementById('layoutPatternMins').innerHTML = layoutPatternMins.toFixed(1);
+  document.getElementById('cutPatternMins').innerHTML = cutPatternMins.toFixed(1);
+  document.getElementById('cutAcousticalLiningMins').innerHTML = cutAcousticalLiningMins.toFixed(1);
+  document.getElementById('programNestSecs').innerHTML = programNestSecs.toFixed(1);
+  document.getElementById('cutPatternSecs').innerHTML = cutPatternSecs.toFixed(1);
+  document.getElementById('cutAcousticalLiningSecs').innerHTML = cutAcousticalLiningSecs.toFixed(1);
+
+  //// IF DUCT IS LINED /////////////////////////////////////////////////////////////////////////////////
+  var isDuctLined = 0;
+  var linedPieceMins = 0;
+  var unLinedPieceMins = (shearBlankMins + layoutPatternMins + cutPatternMins + (1.3 * laborMultiplier));
+  var linedPieceSecs = 0;
+  var unLinedPieceSecs = shearBlankSecs + programNestSecs + cutPatternSecs + (((1.3 * laborMultiplier) + isDuctLined) * .07 * 12 + isDuctLined);
+  var justificationMultiplier = 46400;
+  
+  if(percentageDuct !== 0) {
+    var isDuctLined = 1;
+    var unLinedPieceMins = 0;
+    var linedPieceMins = shearBlankMins + layoutPatternMins + cutPatternMins + (cutAcousticalLiningMins * percentageDuct) + ((1.3 * laborMultiplier) + isDuctLined);
+    var unLinedPieceSecs = 0;
+    var linedPieceSecs =shearBlankSecs+programNestSecs+cutPatternSecs+(cutAcousticalLiningSecs*percentageDuct)+(((1.3*laborMultiplier)+isDuctLined)*.07*12+isDuctLined);
+    var justificationMultiplier = 63400;
+  }
+  
+  var materialHandlingMins = (1.3 * laborMultiplier) + isDuctLined;
+  var materialHandlingSecs = materialHandlingMins * .07 * 12 + isDuctLined;
+  
+  document.getElementById('materialHandlingMins').innerHTML = materialHandlingMins.toFixed(1);
+  document.getElementById('materialHandlingSecs').innerHTML = materialHandlingSecs.toFixed(1);
+  document.getElementById('unLinedPieceMins').innerHTML = unLinedPieceMins.toFixed(1);
+  document.getElementById('linedPieceMins').innerHTML = linedPieceMins.toFixed(1);
+  document.getElementById('linedPieceSecs').innerHTML = Math.round(linedPieceSecs);
+  document.getElementById('unLinedPieceSecs').innerHTML = Math.round(unLinedPieceSecs);
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  var piecesMins = parseFloat(unLinedPieceMins) + parseFloat(linedPieceMins);
+  var piecesSecs = parseFloat(unLinedPieceSecs) + parseFloat(linedPieceSecs);
+  var partsPerHourMins = 60 / piecesMins;
+  var partsPerHourSecs = 60 / piecesSecs * 60;
+  var laborHoursPerYearMins = piecesMins * 2080 * poundMultiplier;
+  var laborHoursPerYearSecs = piecesSecs / 60 * 2080 * poundMultiplier;
+  var laborCostPerYearMins = piecesMins * 2080 * poundMultiplier * hourlyRate;
+  var laborCostPerYearSecs = laborHoursPerYearSecs * hourlyRate;
+  var sheetsSecs = annualLbs / getSheetWeight(metalThickness);
+  var sheetsMins = annualLbs / getSheetWeight(metalThickness);
+  var materialCostMins = annualLbs * costPerPoundSheet;
+  var materialCostSecs = annualLbs * costPerPoundSheet;
+  var metalScrapMaterialMins = .2 * materialCostMins;
+  var metalScrapMaterialSecs = .15 * materialCostSecs;
+  var annualMaterialCostMins = materialCostMins + metalScrapMaterialMins;
+  var annualMaterialCostSecs = materialCostSecs + metalScrapMaterialSecs;
+  var linerCostMins = (costPerRoll / linerMultiplier) * metalMultiplier * percentageDuct * linerRatio * poundMultiplier * (isDuctLined * 10);
+  var linerCostSecs = (costPerRoll / linerMultiplier) * metalMultiplier * percentageDuct * linerRatio * poundMultiplier * (isDuctLined * 10);
+  var linerScrapMaterialMins = .2 * (linerCostMins * 1.1111);
+  var linerScrapMaterialSecs = .16 * linerCostSecs;
+  var annualLinerCostMins = linerCostMins + linerScrapMaterialMins;
+  var annualLinerCostSecs = linerCostSecs + linerScrapMaterialSecs;
+  var rollsLinerMins = annualLinerCostMins / costPerRoll;
+  var rollsLinerSecs = annualLinerCostSecs / costPerRoll;
+  
+  document.getElementById('partsPerHourMins').innerHTML = partsPerHourMins.toFixed(1);
+  document.getElementById('partsPerHourSecs').innerHTML = partsPerHourSecs.toFixed(1);
+  document.getElementById('laborHoursPerYearMins').innerHTML = addCommas(Math.round(laborHoursPerYearMins));
+  document.getElementById('laborHoursPerYearSecs').innerHTML = addCommas(Math.round(laborHoursPerYearSecs));
+  document.getElementById('laborCostPerYearMins').innerHTML = "$" + addCommas(Math.round(laborCostPerYearMins));
+  document.getElementById('laborCostPerYearSecs').innerHTML = "$" + addCommas(Math.round(laborCostPerYearSecs));
+  document.getElementById('sheetsSecs').innerHTML = addCommas(Math.round(sheetsSecs));
+  document.getElementById('sheetsMins').innerHTML = addCommas(Math.round(sheetsMins));
+  document.getElementById('materialCostMins').innerHTML = "$" + addCommas(Math.round(materialCostMins));
+  document.getElementById('materialCostSecs').innerHTML = "$" + addCommas(Math.round(materialCostSecs));
+  document.getElementById('metalScrapMaterialMins').innerHTML = "$" + addCommas(Math.round(metalScrapMaterialMins));
+  document.getElementById('metalScrapMaterialSecs').innerHTML = "$" + addCommas(Math.round(metalScrapMaterialSecs));
+  document.getElementById('annualMaterialCostMins').innerHTML = "$" + addCommas(Math.round(annualMaterialCostMins));
+  document.getElementById('annualMaterialCostSecs').innerHTML = "$" + addCommas(Math.round(annualMaterialCostSecs));
+  document.getElementById('linerCostMins').innerHTML = "$" + addCommas(Math.round(linerCostMins));
+  document.getElementById('linerCostSecs').innerHTML = "$" + addCommas(Math.round(linerCostSecs));
+  document.getElementById('linerScrapMaterialMins').innerHTML = "$" + addCommas(Math.round(linerScrapMaterialMins));
+  document.getElementById('linerScrapMaterialSecs').innerHTML = "$" + addCommas(Math.round(linerScrapMaterialSecs));
+  document.getElementById('annualLinerCostMins').innerHTML = "$" + addCommas(Math.round(annualLinerCostMins));
+  document.getElementById('annualLinerCostSecs').innerHTML = "$" + addCommas(Math.round(annualLinerCostSecs));
+  document.getElementById('rollsLinerMins').innerHTML = addCommas(Math.round(rollsLinerMins));
+  document.getElementById('rollsLinerSecs').innerHTML = addCommas(Math.round(rollsLinerSecs));
+  
+  // ANNUAL SAVINGS
+  var laborSavings = laborCostPerYearMins - laborCostPerYearSecs;
+  var metalMaterialSavings = annualMaterialCostMins - annualMaterialCostSecs;
+  var linerMaterialSavings = annualLinerCostMins - annualLinerCostSecs;
+  var laborHourSavings = laborHoursPerYearMins - laborHoursPerYearSecs;
+  var savingsPerPound = metalMaterialSavings / annualLbs;
+  var annualSavings = laborSavings + metalMaterialSavings + linerMaterialSavings;
+  var justificationYears = justificationMultiplier / annualSavings;
+
+  document.getElementById('laborSavings').innerHTML = "$" + addCommas(Math.round(laborSavings));
+  document.getElementById('metalMaterialSavings').innerHTML = "$" + addCommas(Math.round(metalMaterialSavings));
+  document.getElementById('linerMaterialSavings').innerHTML = "$" + addCommas(Math.round(linerMaterialSavings));
+  document.getElementById('laborHourSavings').innerHTML = addCommas(Math.round(laborHourSavings));
+  document.getElementById('savingsPerPound').innerHTML = "$" + savingsPerPound.toFixed(2);
+  document.getElementById('annualSavings').innerHTML = "<strong><font color='#006600' size='+2'>$" + addCommas(Math.round(annualSavings)) + "</font></strong>";
+  document.getElementById('justificationYears').innerHTML = justificationYears.toFixed(1);
+  document.getElementById('annualSavingsHid').value= addCommas(Math.round(annualSavings));
+  document.getElementById('justificationYearsHid').value= justificationYears.toFixed(1);
+  
+  //// RECOMMEND MACHINE /////////////////////////////////////////////////////////////////////////////////
+  if(!isNaN(annualSavings) ) {
+  
+/*  // LINING IS LESS THAN 10%
+  if (annualLbs < 250000 && percentageDuct <= .10 && annualSavings <= 50000) { var recommendedMachine = 'HVAC 510'; }
+  if (annualLbs < 250000 && percentageDuct <= .10 && annualSavings > 50000) { var recommendedMachine = 'HVAC 520 DT'; }
+  // LINING IS OVER 10%
+  if (annualLbs < 250000 && percentageDuct > .10 && annualSavings <= 60000) { var recommendedMachine = 'HVAC 510 DL'; }
+  if (annualLbs < 250000 && percentageDuct > .10 && annualSavings > 60000) { var recommendedMachine = 'HVAC 520 DL'; }
+  // MATERIAL IS OVER 250,000 lbs
+  if (annualLbs >= 250000 && annualSavings <= 107000) { var recommendedMachine = 'HVAC 520 DT'; }
+  if (annualLbs >= 250000 && annualSavings > 107000) { var recommendedMachine = 'HVAC 520 DT & Plasma Feeder'; }*/
+  
+  // LABOR HOURS UNDER 412
+  if (laborHoursPerYearSecs <= 412 && percentageDuct <= .10) { var recommendedMachine = 'HVAC 510'; var machineLink = "mod_8000.html";}
+  if (laborHoursPerYearSecs <= 412 && percentageDuct > .10) { var recommendedMachine = 'HVAC 510 DL'; var machineLink = "mod_DL8000.html";}
+  
+  // LABOR HOURS OVER 412
+  if (laborHoursPerYearSecs > 412 && percentageDuct <= .10) { var recommendedMachine = 'HVAC 520 DT'; var machineLink = "mod_DT8000.html";}
+  if (laborHoursPerYearSecs > 412 && percentageDuct > .10) { var recommendedMachine = 'HVAC 520 DL'; var machineLink = "mod_DL8000.html";}
+  
+  document.getElementById('recommendedMachine').innerHTML = "Recommended Machine: <strong>" + recommendedMachine + "</strong> - <a href='" + machineLink + "' class='bodylink'>Click here for more info</a>";
+  }
+}
+</script>
+
+</head>
+
+<body onload="MM_preloadImages('../images/home_button_active.jpg','../images/used_button_active.jpg','../images/contact_button_active3.jpg','../images/company_button_active2.jpg','../images/type2_button_active.jpg','../images/application_button_active.jpg','../images/products_button_active.jpg','../images/applications_nav_button_active2.jpg','../images/back_hvac_active.png')">
+<div id="shadow_right"><div id="header" alt="Fabricating Equipment Sales - Structural Steel and Sheet Metal Fabricating Equipment"></div>
+<div class="style1" id="navigation">
+<a href="../index.html"><img src="../images/home_button.jpg" alt="HOME" border="0" id="Image1" onmouseover="MM_swapImage('Image1','','../images/home_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="../company.html"><img src="../images/company_button.jpg" alt="COMPANY" width="158" height="27" border="0" id="Image2" onmouseover="MM_swapImage('Image2','','../images/company_button_active2.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="../products.html"><img src="../images/products_button.jpg" alt="PRODUCTS" width="158" height="27" border="0" id="Image3" onmouseover="MM_swapImage('Image3','','../images/products_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="../applications.html"><img src="../images/applications_nav_button.jpg" alt="SERVICES" width="158" height="27" border="0" id="Image4" onmouseover="MM_swapImage('Image4','','../images/applications_nav_button_active2.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="../used_equipment.html"><img src="../images/used_button.jpg" alt="USED EQUIPMENT" width="158" height="27" border="0" id="Image5" onmouseover="MM_swapImage('Image5','','../images/used_button_active.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><a href="../contact_us.html"><img src="../images/contact_button.jpg" alt="CONTACT US" width="160" height="27" border="0" id="Image6" onmouseover="MM_swapImage('Image6','','../images/contact_button_active3.jpg',1)" onmouseout="MM_swapImgRestore()" /></a><img src="../images/divider.jpg" width="950" height="8" /></div>
+<div style="clear:both"></div><div id="content">
+    <div id="navigation_left">
+      <div class="social"><div class="social_badges"><a href="http://www.facebook.com/FabEquipSalesCo" target="_blank"><img src="../facebook.jpg" alt="Find us on Facebook" width="51" height="51" align="left" /></a></div><div class="social_badges"><a href="https://twitter.com/FabEquipSales" target="_blank"><img src="../twitter.jpg" alt="Follow us on Twitter" width="51" height="51" align="left" /></a></div><div class="social_badges"><a href="http://www.linkedin.com/company/2154517" target="_blank"><img src="../linkedin.jpg" alt="Find us on LinkedIn" width="51" height="51" align="left" /></a></div><div class="social_badges"><a href="https://plus.google.com/113673676841089222425/about" target="_blank"><img src="../googleplus2.jpg" alt="Find us on Google Plus" width="51" height="51" align="left" /></a></div>
+        </div>
+        <img src="../images/applications_button.jpg" alt="APPLICATION" width="170" height="27" id="Image8" />
+        <div id="navigation_txt"><p><br />
+            <span class="content_txt"><span class="style2"><a href="general_fabrication.html">General Fabrication</a></span></span></p>
+            <p class="content_txt"><strong><a href="precision_sheet_metal.html">Precision Sheet Metal</a></strong></p>
+            <p class="content_txt"><strong><a href="structural_steel.html">Structural Steel</a></strong></p>
+            <p class="content_txt"><strong><a href="steel_service_centers.html">Steel Service Centers</a></strong></p>
+        </div>
+<span class="content_txt"><br />
+            <img src="../images/type_button.jpg" alt="TYPE" width="170" height="27" id="Image7" />            </span>
+            <div id="navigation_txt">
+            <p class="content_txt"><strong><a href="angle_rolls.html">Angle Rolls</a></strong></p>
+            <p class="content_txt"><strong><a href="beam_coping.html">Beam Coping</a></strong></p>
+            <p class="content_txt"><strong><a href="beam_drills.html">Beam Drills</a></strong></p>
+<p class="content_txt"><strong><a href="hvac.html">HVAC</a></strong></p>
+<p class="content_txt"><strong><a href="ironworkers.html">Ironworkers</a></strong></p>
+            <p class="content_txt"><strong><a href="lasers.html">Lasers</a></strong></p>
+            <p class="nav_txt_active"><strong>Plasma &amp; Burning</strong></p>
+            <p class="content_txt"><strong><a href="plate_punches.html">Plate Processing</a></strong></p>
+            <p class="content_txt"><strong><a href="press_brakes.html">Press Brakes</a></strong></p>
+            <p class="content_txt"><strong><a href="press_brake_tooling.html">Press Brake Tooling</a></strong></p>
+            <p class="content_txt"><strong><a href="punch_presses.html">Punch Presses</a></strong></p>
+            <p class="content_txt"><strong><a href="punches_and_dies.html">Punches and Dies</a></strong></p>
+            <p class="content_txt"><strong><a href="saws.html">Saws</a></strong></p>
+            <p class="content_txt"><strong><a href="shears.html">Shears</a></strong></p>
+            <p class="content_txt"><strong><a href="sheet_and_plate_rolls.html">Sheet and Plate Rolls</a></strong></p>
+            <p class="content_txt"><strong><a href="tube_benders.html">Tube and Pipe Benders</a></strong></p>
+            <p class="content_txt"><strong><a href="turret_punches.html">Turret Punches</a></strong></p>
+          <p class="content_txt"><strong><a href="water_jet.html">Water Jet</a></strong></p>
+        </div>
+      </div>
+      <div id="content"> 
+      <div id="product_content">
+      <p class="content_txt">
+           <p class="blue_txt_xlg" align="center">Vicon Justification Calculator</p>
+<p id="recommendedMachine" align="center" class="content_bold_lg">Recommended Machine:</p>
+<form name="justificationCalculator" id="justificationCalculator" action="insertDb.php" method="post" enctype="multipart/form-data">
+      <table width="600" border="0" align="center" cellpadding="3" cellspacing="0" class="copy" style="border:1px solid #006600; font-family: Arial, Helvetica, sans-serif; font-size: 14px;">
+    <tr>
+      <td colspan="5" align="center" bgcolor="#006600"><font color="#FFFFFF"><strong>Calculation Scenario</strong></font></td>
+   </tr>
+    <tr>
+      <td width="30" align="left" valign="middle">&nbsp;</td>
+      <td width="260" align="left" valign="middle"><strong>% of Lined Duct</strong></td>
+     <td width="68" align="left" valign="middle"><input name="percentageDuct" type="text" class="yellowBox" id="percentageDuct" tabindex="1" onkeyup="calcNumbers()" size="8"/></td>
+     <td width="216" colspan="2" rowspan="7" align="center" valign="middle">
+       
+       <table border="0" align="center" cellpadding="1" cellspacing="0" class="copy">
+         <tr>
+           <td colspan="2" align="center" valign="top"><strong>Enter % of metal used</strong></td>
+           </tr>
+         <tr>
+           <td align="left" valign="middle"><input name="mt019" type="text" class="yellowBox" id="mt019" onkeyup="calcNumbers()" value="0" size="8" tabindex="7"/></td>
+           <td align="left" valign="middle">26ga / .019 in.</td>
+         </tr>
+         <tr>
+           <td align="left" valign="middle"><input name="mt024" type="text" class="yellowBox" id="mt024" onkeyup="calcNumbers()" value="0" size="8" tabindex="8"/></td>
+           <td align="left" valign="middle">24ga / .024 in.</td>
+         </tr>
+         <tr>
+           <td align="left" valign="middle"><input name="mt030" type="text" class="yellowBox" id="mt030" onkeyup="calcNumbers()" value="0" size="8" tabindex="9"/></td>
+           <td align="left" valign="middle">22ga / .030 in.</td>
+         </tr>
+         <tr>
+           <td align="left" valign="middle"><input name="mt036" type="text" class="yellowBox" id="mt036" onkeyup="calcNumbers()" value="0" size="8" tabindex="10"/></td>
+           <td align="left" valign="middle">20ga / .036 in.</td>
+         </tr>
+         <tr>
+           <td align="left" valign="middle"><input name="mt048" type="text" class="yellowBox" id="mt048" onkeyup="calcNumbers()" value="0" size="8" tabindex="11"/></td>
+           <td align="left" valign="middle">18ga / .048 in.</td>
+         </tr>
+         <tr>
+           <td align="left" valign="middle"><input name="mt060" type="text" class="yellowBox" id="mt060" onkeyup="calcNumbers()" value="0" size="8" tabindex="12"/></td>
+           <td align="left" valign="middle">16ga / .060 in.</td>
+         </tr>
+         <tr>
+           <td colspan="2" align="left" valign="middle" id="metalThickness"><strong>0%</strong></td>
+           </tr>
+         </table>   </td>
+   </tr>
+    <tr>
+      <td align="left" valign="middle">&nbsp;</td>
+      <td align="left" valign="middle"><strong>Liner Thickness </strong>(in)</td>
+     <td align="left" valign="middle"><input name="linerThickness" type="text" class="yellowBox" id="linerThickness" tabindex="2" onkeyup="calcNumbers()" size="8"/></td>
+     </tr>
+    <tr>
+      <td align="left" valign="middle">&nbsp;</td>
+      <td align="left" valign="middle"><strong>Cost per Roll of Liner </strong>(USD)</td>
+     <td align="left" valign="middle"><input name="costPerRoll" type="text" class="yellowBox" id="costPerRoll" tabindex="3" onkeyup="calcNumbers()" size="8"/></td>
+     </tr>
+    <tr>
+      <td align="left" valign="middle">&nbsp;</td>
+      <td align="left" valign="middle"><strong>Annual Metal Usage</strong> (lbs)</td>
+     <td align="left" valign="middle"><input name="annualLbs" type="text" class="yellowBox" id="annualLbs" tabindex="4" onkeyup="calcNumbers()" size="8"/></td>
+     </tr>
+    <tr>
+      <td align="left" valign="middle">&nbsp;</td>
+      <td align="left" valign="middle"><strong>Hourly Labor Rate </strong>(USD)</td>
+      <td align="left" valign="middle"><input name="hourlyRate" type="text" class="yellowBox" id="hourlyRate" tabindex="5" onkeyup="calcNumbers()" size="8"/></td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle">&nbsp;</td>
+      <td align="left" valign="middle"><strong>Cost per Pound (Sheet) </strong>(USD)</td>
+      <td align="left" valign="middle"><input name="costPerPoundSheet" type="text" class="yellowBox" id="costPerPoundSheet" tabindex="6" onkeyup="calcNumbers()" size="8"/></td>
+    </tr>
+    <tr>
+      <td align="left" valign="middle">&nbsp;</td>
+      <td align="left" valign="middle">&nbsp;</td>
+      <td align="left" valign="middle">&nbsp;</td>
+    </tr>
+    
+  </table>
+  
+<table width="600" border="0" align="center" cellpadding="3" cellspacing="0" class="copy" style="border:1px solid #006600; font-size: 14px;">
+  <tr>
+    <td colspan="4" align="center" bgcolor="#006600"><font color="#FFFFFF"><strong>Annual Savings</strong></font></td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center" valign="middle" id="annualSavings"><strong><font color="#006600" size="+2">$0</font></strong></td>
+  </tr>
+    <input type="hidden" name="calcType" id="calcType" value="Recommend Machine" /><br />
+    <input type="hidden" name="annualSavingsHid" id="annualSavingsHid" /><br />
+    <input type="hidden" name="justificationYearsHid" id="justificationYearsHid" />
+  <tr>
+    <td width="25" align="left" valign="middle">&nbsp;</td>
+     <td width="225" align="right" valign="middle"><strong>Approximate Justification in Years</strong></td>
+     <td width="225" align="left" valign="middle" id="justificationYears">0</td>
+     <td width="25" align="left" valign="middle">&nbsp;</td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="right" valign="middle"><strong>Labor Savings: Machine vs. Manual</strong></td>
+     <td align="left" valign="middle" id="laborSavings">$0</td>
+     <td align="left" valign="middle">&nbsp;</td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="right" valign="middle"><strong>Material Savings</strong></td>
+     <td align="left" valign="middle" id="metalMaterialSavings">$0</td>
+     <td align="left" valign="middle">&nbsp;</td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="right" valign="middle"><strong>Liner Material Savings</strong></td>
+     <td align="left" valign="middle" id="linerMaterialSavings">$0</td>
+     <td align="left" valign="middle">&nbsp;</td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="right" valign="middle"><strong>Labor Hour Savings</strong></td>
+     <td align="left" valign="middle" id="laborHourSavings">0</td>
+     <td align="left" valign="middle">&nbsp;</td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="right" valign="middle"><strong>Savings Per Pound </strong></td>
+     <td align="left" valign="middle" id="savingsPerPound">$0</td>
+     <td align="left" valign="middle">&nbsp;</td>
+   </tr>
+   <tr>
+      <td align="left" valign="middle">&nbsp;</td>
+      <td align="left" valign="middle">&nbsp;</td>
+    </tr>
+  </table>
+  
+<table width="600" border="0" align="center" cellpadding="3" cellspacing="0" class="copy" style="border:1px solid #006600; font-size: 14px;">
+  <tr>
+    <td colspan="7" align="center" bgcolor="#006600"><font color="#FFFFFF"><strong>Shop Parameters</strong></font></td>
+   </tr>
+  <tr>
+    <td width="15" height="45" align="left" valign="middle">&nbsp;</td>
+     <td colspan="2" align="center" valign="middle"><strong><font size="+1">Vicon Machine</font></strong></td>
+     <td width="10" align="left" valign="middle">&nbsp;</td>
+     <td colspan="2" align="center" valign="middle"><strong><font size="+1">Manual Production</font></strong></td>
+     <td width="15" align="left" valign="middle">&nbsp;</td>
+   </tr>
+  <tr>
+    <td height="45" align="left" valign="middle">&nbsp;</td>
+     <td colspan="5" align="center" valign="middle"><strong>Time Breakdown</strong></td>
+     <td align="left" valign="middle">&nbsp;</td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Seconds</strong></td>
+     <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Minutes</strong></td>
+     <td align="left" valign="middle">&nbsp;</td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Shear Blank</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="shearBlankSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Shear Blank</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="shearBlankMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Program &amp; Nest</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="programNestSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Layout Pattern</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="layoutPatternMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Cut Pattern</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="cutPatternSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Cut Pattern</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="cutPatternMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Cut Acoustical Lining</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="cutAcousticalLiningSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Cut Acoustical Lining</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="cutAcousticalLiningMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Material Handling</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="materialHandlingSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Material Handling</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="materialHandlingMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td height="45" align="left" valign="middle">&nbsp;</td>
+     <td colspan="5" align="center" valign="middle"><strong>Cost Breakdown</strong></td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Parts per Hour</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="partsPerHourSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Parts per Hour</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="partsPerHourMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Labor Hours per Year</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="laborHoursPerYearSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Labor Hours per Year</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="laborHoursPerYearMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Labor Cost per Year</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="laborCostPerYearSecs">$0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Labor Cost per Year</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="laborCostPerYearMins">$0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE">&nbsp;</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"></td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>5x10 Sheets</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="sheetsSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>5x10 Sheets</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="sheetsMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Annual Material Cost</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="materialCostSecs">$0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Annual Material Cost</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="materialCostMins">$0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Scrap Material </strong>(15%)</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="metalScrapMaterialSecs">$0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Scrap Material </strong>(20%)</td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="metalScrapMaterialMins">$0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Material Cost</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="annualMaterialCostSecs">$0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Material Cost</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="annualMaterialCostMins">$0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE">&nbsp;</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"></td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Rolls of Liner</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="rollsLinerSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Rolls of Liner</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="rollsLinerMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Liner Cost</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="linerCostSecs">$0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Liner Cost</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="linerCostMins">$0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Scrap Material </strong>(16%)</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="linerScrapMaterialSecs">$0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Scrap Material </strong>(20%)</td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="linerScrapMaterialMins">$0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Annual Liner Cost</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="annualLinerCostSecs">$0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Annual Liner Cost</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="annualLinerCostMins">$0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td height="45" align="left" valign="middle">&nbsp;</td>
+     <td colspan="5" align="center" valign="middle"><strong>Average Production Rates</strong></td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Seconds</strong></td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Minutes</strong></td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Average Lined Piece</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="linedPieceSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Average Lined Piece</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="linedPieceMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE"><strong>Average Un-Lined Piece</strong></td>
+     <td align="left" valign="middle" bgcolor="#CDF0FE" id="unLinedPieceSecs">0</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC"><strong>Average Un-Lined Piece</strong></td>
+     <td align="left" valign="middle" bgcolor="#FFFFCC" id="unLinedPieceMins">0</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  <tr>
+    <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" id="unLinedPieceSecs3">&nbsp;</td>
+     <td align="left" valign="middle"></td>
+     <td align="left" valign="middle">&nbsp;</td>
+     <td align="left" valign="middle" id="unLinedPieceMins3">&nbsp;</td>
+     <td align="left" valign="middle"></td>
+   </tr>
+  </table>
+  </p>
+<p class="blue_txt">&nbsp;</p>
+          <p class="blue_txt">Contact us for more information:</p>
+          <form id="form1" form name="form1" action="/gdform.php" method="post">
+                      <input type="hidden" name="subject" value="Form Submission from Vicon Precision Plasma page" />
+                      <input type="hidden" name="redirect" value="thank_you.html" />
+                      <table width="306" border="0">
+                      <tr>
+                      <td width="54" class="content_txt">Name:</td>
+                      <td width="242" class="content_txt"><input type="text" name="Name" id="Name" /></td></tr>
+                      <tr>
+                      <td class="content_txt">Email:</td>
+                      <td class="content_txt"><input type="text" name="Email" id="Email" /></td></tr>
+                      <tr>
+                      <td class="content_txt">Phone:</td>
+                      <td class="content_txt"><input type="text" name="Phone" id="Phone" />
+                      </td></tr></table>
+                      <span class="content_txt"><br />
+                      <label>Message:</label>
+                      </span>
+                      <textarea name="Message" id="Message" cols="30" rows="5"></textarea>
+                      <br /><br />
+              <input type="submit" id="submit" class="content_txt" value="Submit" /><p></p>
+          </form>
+          
+        <p class="red_txt"><strong>Or give us a call at: 303-466-7341 <br />
+Monday - Friday, 7:00 AM - 5:00 PM, MST</strong></p>
+          <p>&nbsp;</p>
+          <p><a href="../products/hvac.html"><img src="../images/back_hvac.png" alt="Back to all products" border="0" id="Image9" onmouseover="MM_swapImage('Image9','','../images/back_hvac_active.png',1)" onmouseout="MM_swapImgRestore()" /></a></p>
+    </div>
+    <div style='clear:both;'></div>
+
+  </div></div></div>
+<div id="bottom_shadow">&nbsp;</div>
+<div id="shadow_left"><div id="shadow_right">
+  <div id="footer">
+    <div align="center" class="footer_txt">Offering Quality Equipment and Service Throughout Colorado and Wyoming Since 1973! </div>
+        <div id="bottom_nav">
+          <div align="center"><span class="footer_nav_txt"><a href="../index.html">HOME</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="../company.html">COMPANY</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="../products.html">PRODUCTS</a> &nbsp;&nbsp;| &nbsp;<a href="../applications.html">&nbsp;APPLICATIONS</a>&nbsp; &nbsp;| &nbsp;&nbsp;<a href="../used_equipment.html">USED EQUIPMENT</a>&nbsp; &nbsp;| &nbsp;&nbsp;<a href="../contact_us.html">CONTACT US</a></span></div>
+        </div>
+      <div id="copyright">
+      <div align="center" class="red_txt"><strong>© Copyright 2010 - 2012 Fabricating Equipment Sales Co. &nbsp;-&nbsp; Phone: 303-466-7341 &nbsp;-&nbsp; Email: info@fabricatingequipmentsales.com&nbsp;  - &nbsp;Website Design by <u><a href="http://justbysam.com/" target="_blank" class="external">Samantha Smith</a></u></strong></div>
+    </div>
+  </div>
+</div></div>
+<div id="bottom_shadow">&nbsp;</div></div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16062387-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30019650-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+	
+	#dhtmlgoodies_slideshow{
+		width:500px;	/* Total width of slideshow */
+
+
+	}
+	
+	#previewPane{
+	margin-bottom: 10px;
+	text-align: center;
+	vertical-align: auto;
+	padding-top: 10px;
+	position: static;
+	/* CSS HACK */
+	width: 497px;
+	}
+	#previewPane img{
+		line-height:400px;
+		height: auto;
+		width:auto;
+	}
+	#previewPane #largeImageCaption{	/* CSS styling of image caption below large image */
+		font-style:italic;
+		text-align:center;
+		font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;	/* Font to use */
+		font-size:0.9em;
+	}
+	#galleryContainer{
+	height:102px;	/* Height of the images + 2 */
+	position:relative;
+	overflow:hidden;
+	/* CSS HACK */
+		height: 104px;	/* IE 5.x - Added 2 pixels for border left and right */
+	height/* */:/**/102px;	/* Other browsers */
+	height: /**/120px;
+	padding: 1px;
+	}
+	
+	#theImages{
+	position: relative;
+	height: 100px;
+	left: 0px;
+	width: 500px;
+	}
+	#theImages #slideEnd{
+		float:left;
+	}
+	#theImages img{
+		float:left;
+		padding:1px;
+		cursor:pointer;
+		border:0px;
+	}
+
+	#waitMessage{
+		display:none;
+		position:absolute;
+		left:200px;
+		top:150px;
+		background-color:#FFF;
+		border:3px double #000;
+		padding:4px;
+		color:#555;
+		font-size:0.9em;
+		font-family:arial;	
+	}
+	
+	#theImages .imageCaption{
+		display:none;
+	}
+	
+	
+#used_left_panel {
+	float: left;
+	height: auto;
+	width: 510px;
+}
+#used_right_panel {
+	float: left;
+	height: auto;
+	width: 320px;
+	padding-left: 30px;
+	padding-top: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	z-index: 100;
+}
