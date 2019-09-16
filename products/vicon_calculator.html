@@ -94,13 +94,13 @@ function calcNumbers() {
   var mt048 = .048 * document.getElementById('mt048').value;
   var mt060 = .060 * document.getElementById('mt060').value;
   var metalThickness = ((parseFloat(mt019) + parseFloat(mt024) + parseFloat(mt030) + parseFloat(mt036) + parseFloat(mt048) + parseFloat(mt060)) / 100).toFixed(3);
-  
+
   var metalPercentage = parseFloat(document.getElementById('mt019').value) + parseFloat(document.getElementById('mt024').value) + parseFloat(document.getElementById('mt030').value) + parseFloat(document.getElementById('mt036').value) + parseFloat(document.getElementById('mt048').value) + parseFloat(document.getElementById('mt060').value);
-  
+
   document.getElementById('metalThickness').innerHTML = "<strong>" + metalPercentage + "%</strong>";
   if(metalPercentage > 100) { document.getElementById('metalThickness').innerHTML = "<strong><font color='red'>" + metalPercentage + "%</strong> - Total can't exceed 100%</font>"; }
   /////////////////////////////////////////////////////////////////////////////////////////////////////////
-  
+
   // GET VALUES
   var annualLbs = document.getElementById('annualLbs').value.replace(/[^0-9]/g,"");
   var hourlyRate = document.getElementById('hourlyRate').value;
@@ -114,7 +114,7 @@ function calcNumbers() {
   var metalMultiplier = 124.6165 * (1 / metalThickness);
   var linerMultiplier = 174.0966 * (1 / linerThickness);
   var linerRatio = metalMultiplier / linerMultiplier;
-    
+
   // CALCULATIONS
   var shearBlankMins = 0.5;
   var layoutPatternMins = 2.5 * laborMultiplier;
@@ -124,7 +124,7 @@ function calcNumbers() {
   var programNestSecs = layoutPatternMins * 7;
   var cutPatternSecs = cutPatternMins * 1.2 * 12;
   var cutAcousticalLiningSecs = cutAcousticalLiningMins * 3.2 * 12;
-  
+
   document.getElementById('shearBlankMins').innerHTML = shearBlankMins;
   document.getElementById('layoutPatternMins').innerHTML = layoutPatternMins.toFixed(1);
   document.getElementById('cutPatternMins').innerHTML = cutPatternMins.toFixed(1);
@@ -140,7 +140,7 @@ function calcNumbers() {
   var linedPieceSecs = 0;
   var unLinedPieceSecs = shearBlankSecs + programNestSecs + cutPatternSecs + (((1.3 * laborMultiplier) + isDuctLined) * .07 * 12 + isDuctLined);
   var justificationMultiplier = 46400;
-  
+
   if(percentageDuct !== 0) {
     var isDuctLined = 1;
     var unLinedPieceMins = 0;
@@ -149,10 +149,10 @@ function calcNumbers() {
     var linedPieceSecs =shearBlankSecs+programNestSecs+cutPatternSecs+(cutAcousticalLiningSecs*percentageDuct)+(((1.3*laborMultiplier)+isDuctLined)*.07*12+isDuctLined);
     var justificationMultiplier = 63400;
   }
-  
+
   var materialHandlingMins = (1.3 * laborMultiplier) + isDuctLined;
   var materialHandlingSecs = materialHandlingMins * .07 * 12 + isDuctLined;
-  
+
   document.getElementById('materialHandlingMins').innerHTML = materialHandlingMins.toFixed(1);
   document.getElementById('materialHandlingSecs').innerHTML = materialHandlingSecs.toFixed(1);
   document.getElementById('unLinedPieceMins').innerHTML = unLinedPieceMins.toFixed(1);
@@ -161,7 +161,7 @@ function calcNumbers() {
   document.getElementById('unLinedPieceSecs').innerHTML = Math.round(unLinedPieceSecs);
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////
-  
+
   var piecesMins = parseFloat(unLinedPieceMins) + parseFloat(linedPieceMins);
   var piecesSecs = parseFloat(unLinedPieceSecs) + parseFloat(linedPieceSecs);
   var partsPerHourMins = 60 / piecesMins;
@@ -186,7 +186,7 @@ function calcNumbers() {
   var annualLinerCostSecs = linerCostSecs + linerScrapMaterialSecs;
   var rollsLinerMins = annualLinerCostMins / costPerRoll;
   var rollsLinerSecs = annualLinerCostSecs / costPerRoll;
-  
+
   document.getElementById('partsPerHourMins').innerHTML = partsPerHourMins.toFixed(1);
   document.getElementById('partsPerHourSecs').innerHTML = partsPerHourSecs.toFixed(1);
   document.getElementById('laborHoursPerYearMins').innerHTML = addCommas(Math.round(laborHoursPerYearMins));
@@ -209,7 +209,7 @@ function calcNumbers() {
   document.getElementById('annualLinerCostSecs').innerHTML = "$" + addCommas(Math.round(annualLinerCostSecs));
   document.getElementById('rollsLinerMins').innerHTML = addCommas(Math.round(rollsLinerMins));
   document.getElementById('rollsLinerSecs').innerHTML = addCommas(Math.round(rollsLinerSecs));
-  
+
   // ANNUAL SAVINGS
   var laborSavings = laborCostPerYearMins - laborCostPerYearSecs;
   var metalMaterialSavings = annualMaterialCostMins - annualMaterialCostSecs;
@@ -228,10 +228,10 @@ function calcNumbers() {
   document.getElementById('justificationYears').innerHTML = justificationYears.toFixed(1);
   document.getElementById('annualSavingsHid').value= addCommas(Math.round(annualSavings));
   document.getElementById('justificationYearsHid').value= justificationYears.toFixed(1);
-  
+
   //// RECOMMEND MACHINE /////////////////////////////////////////////////////////////////////////////////
   if(!isNaN(annualSavings) ) {
-  
+
 /*  // LINING IS LESS THAN 10%
   if (annualLbs < 250000 && percentageDuct <= .10 && annualSavings <= 50000) { var recommendedMachine = 'HVAC 510'; }
   if (annualLbs < 250000 && percentageDuct <= .10 && annualSavings > 50000) { var recommendedMachine = 'HVAC 520 DT'; }
@@ -241,15 +241,15 @@ function calcNumbers() {
   // MATERIAL IS OVER 250,000 lbs
   if (annualLbs >= 250000 && annualSavings <= 107000) { var recommendedMachine = 'HVAC 520 DT'; }
   if (annualLbs >= 250000 && annualSavings > 107000) { var recommendedMachine = 'HVAC 520 DT & Plasma Feeder'; }*/
-  
+
   // LABOR HOURS UNDER 412
   if (laborHoursPerYearSecs <= 412 && percentageDuct <= .10) { var recommendedMachine = 'HVAC 510'; var machineLink = "mod_8000.html";}
   if (laborHoursPerYearSecs <= 412 && percentageDuct > .10) { var recommendedMachine = 'HVAC 510 DL'; var machineLink = "mod_DL8000.html";}
-  
+
   // LABOR HOURS OVER 412
   if (laborHoursPerYearSecs > 412 && percentageDuct <= .10) { var recommendedMachine = 'HVAC 520 DT'; var machineLink = "mod_DT8000.html";}
   if (laborHoursPerYearSecs > 412 && percentageDuct > .10) { var recommendedMachine = 'HVAC 520 DL'; var machineLink = "mod_DL8000.html";}
-  
+
   document.getElementById('recommendedMachine').innerHTML = "Recommended Machine: <strong>" + recommendedMachine + "</strong> - <a href='" + machineLink + "' class='bodylink'>Click here for more info</a>";
   }
 }
@@ -295,7 +295,7 @@ function calcNumbers() {
           <p class="content_txt"><strong><a href="water_jet.html">Water Jet</a></strong></p>
         </div>
       </div>
-      <div id="content"> 
+      <div id="content">
       <div id="product_content">
       <p class="content_txt">
            <p class="blue_txt_xlg" align="center">Vicon Justification Calculator</p>
@@ -310,7 +310,7 @@ function calcNumbers() {
       <td width="260" align="left" valign="middle"><strong>% of Lined Duct</strong></td>
      <td width="68" align="left" valign="middle"><input name="percentageDuct" type="text" class="yellowBox" id="percentageDuct" tabindex="1" onkeyup="calcNumbers()" size="8"/></td>
      <td width="216" colspan="2" rowspan="7" align="center" valign="middle">
-       
+
        <table border="0" align="center" cellpadding="1" cellspacing="0" class="copy">
          <tr>
            <td colspan="2" align="center" valign="top"><strong>Enter % of metal used</strong></td>
@@ -374,9 +374,9 @@ function calcNumbers() {
       <td align="left" valign="middle">&nbsp;</td>
       <td align="left" valign="middle">&nbsp;</td>
     </tr>
-    
+
   </table>
-  
+
 <table width="600" border="0" align="center" cellpadding="3" cellspacing="0" class="copy" style="border:1px solid #006600; font-size: 14px;">
   <tr>
     <td colspan="4" align="center" bgcolor="#006600"><font color="#FFFFFF"><strong>Annual Savings</strong></font></td>
@@ -428,7 +428,7 @@ function calcNumbers() {
       <td align="left" valign="middle">&nbsp;</td>
     </tr>
   </table>
-  
+
 <table width="600" border="0" align="center" cellpadding="3" cellspacing="0" class="copy" style="border:1px solid #006600; font-size: 14px;">
   <tr>
     <td colspan="7" align="center" bgcolor="#006600"><font color="#FFFFFF"><strong>Shop Parameters</strong></font></td>
@@ -687,7 +687,7 @@ function calcNumbers() {
                       <br /><br />
               <input type="submit" id="submit" class="content_txt" value="Submit" /><p></p>
           </form>
-          
+
         <p class="red_txt"><strong>Or give us a call at: 303-466-7341 <br />
 Monday - Friday, 7:00 AM - 5:00 PM, MST</strong></p>
           <p>&nbsp;</p>
@@ -703,9 +703,9 @@ Monday - Friday, 7:00 AM - 5:00 PM, MST</strong></p>
         <div id="bottom_nav">
           <div align="center"><span class="footer_nav_txt"><a href="../index.html">HOME</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="../company.html">COMPANY</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="../products.html">PRODUCTS</a> &nbsp;&nbsp;| &nbsp;<a href="../applications.html">&nbsp;APPLICATIONS</a>&nbsp; &nbsp;| &nbsp;&nbsp;<a href="../used_equipment.html">USED EQUIPMENT</a>&nbsp; &nbsp;| &nbsp;&nbsp;<a href="../contact_us.html">CONTACT US</a></span></div>
         </div>
-      <div id="copyright">
-      <div align="center" class="red_txt"><strong>© Copyright 2010 - 2012 Fabricating Equipment Sales Co. &nbsp;-&nbsp; Phone: 303-466-7341 &nbsp;-&nbsp; Email: info@fabricatingequipmentsales.com&nbsp;  - &nbsp;Website Design by <u><a href="http://justbysam.com/" target="_blank" class="external">Samantha Smith</a></u></strong></div>
-    </div>
+        <div id="copyright">
+          <div align="center" class="red_txt"><strong>©2010 - 2019 Fabricating Equipment Sales Co. &nbsp;-&nbsp; Phone: 303-466-7341 &nbsp;-&nbsp; Email: info@fabricatingequipmentsales.com</strong></div>
+        </div>
   </div>
 </div></div>
 <div id="bottom_shadow">&nbsp;</div></div>
